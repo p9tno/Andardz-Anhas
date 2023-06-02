@@ -46,20 +46,20 @@ $(document).ready(function() {
     });
 
     function scrollPage () {
-        $(".toTop").on("click","a", function (event) {
+        $(".toTop").on("click", function (event) {
             event.preventDefault();
             let id  = $(this).attr('href');
             let top = $(id).offset().top;
             $('body,html').animate({scrollTop: top}, 1500);
         });
 
-        $(window).scroll(function(){
-            if($(window).scrollTop()>500){
-                $('.toTop').fadeIn(900)
-            }else{
-                $('.toTop').fadeOut(700)
-            }
-        });
+        // $(window).scroll(function(){
+        //     if($(window).scrollTop()>500){
+        //         $('.toTop').fadeIn(900)
+        //     }else{
+        //         $('.toTop').fadeOut(700)
+        //     }
+        // });
     }
     scrollPage();
 
@@ -83,11 +83,14 @@ $(document).ready(function() {
 
 
     function openMobileNav() {
-        $('.header__toggle').click(function(event) {
-            // console.log('Показ меню');
-            $('.navbar').toggleClass('navbar_open');
-            $('.header__toggle').toggleClass('header__toggle_open');
-            $( 'body' ).toggleClass( 'nav-open' );
+        $('.toggle').click(function(event) {
+            $( 'body' ).addClass('nav-open');
+            $( '.header__nav' ).addClass('active');
+        });
+
+        $('.navbar__close').click(function(event) {
+            $( 'body' ).removeClass('nav-open');
+            $( '.header__nav' ).removeClass('active');
         });
     };
     openMobileNav();

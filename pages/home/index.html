@@ -6,29 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="../../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../..//style.css"/>
   </head>
   <body>
     <div class="wrapper" id="wrapper">
       <header class="header">
-        <div class="header__content">
-          <div class="header__logo"><a class="logo" href="/"><img src="/img/logo.png" alt="alt"/></a></div>
-          <div class="header__toggle"></div>
+        <div class="header__row">
+          <div class="header__col">
+            <div class="logo"><a class="logo__link" href="/">Andardz-Anhas</a></div>
+          </div>
+          <div class="header__col">
+            <div class="toggle">Menu</div>
+            <div class="language">
+              <div class="language__label">Language:&nbsp; </div>
+              <div class="language__list">
+                <div class="language__item">Eng</div>
+              </div>
+            </div>
+          </div>
+          <div class="header__col">
+            <div class="search"><a class="search__link" href="#">Search</a></div>
+            <div class="registration"><a class="btn" href="#"><span>registration</span></a></div>
+          </div>
           <div class="header__nav">
+            <div class="navbar__close"></div>
             <nav class="navbar" id="navbar">
               <ul class="menu">
-                <li class="menu-item current-menu-item"><a href="#">Новости</a></li>
-                <li class="menu-item"><a href="#">Объявления</a></li>
-                <li class="menu-item"><a href="#">F.A.Q.</a></li>
-                <li class="menu-item"><a href="#">Контакты</a></li>
-                <li class="menu-item menu-item-has-children"><a href="#">Важное</a>
-                  <ul class="sub-menu">
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                    <li class="menu-item"><a href="#">Важный пункт меню</a></li>
-                  </ul>
-                </li>
+                <li class="menu-item current-menu-item"><a href="#">Fundraising</a></li>
+                <li class="menu-item"><a href="#">What we do</a></li>
+                <li class="menu-item"><a href="#">Publications</a></li>
+                <li class="menu-item"><a href="#">Library</a></li>
+                <li class="menu-item"><a href="#">News</a></li>
+                <li class="menu-item"><a href="#">Write to us</a></li>
+                <li class="menu-item"><a href="#">Faq</a></li>
+                <li class="menu-item"><a href="#">Contact</a></li>
               </ul>
             </nav>
           </div>
@@ -213,10 +224,54 @@
       </main>
       <footer class="footer">
         <div class="footer__content">
-          <p><script type="text/javascript">document.write(new Date().getFullYear());</script></p>
+          <div class="footer__row">
+            <div class="footer__col">
+              <div class="logo"><a class="logo__link" href="/">Andardz-Anhas</a></div>
+              <div class="messenger">
+                <div class="messenger__list">
+                  <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_instagram"></i></a></div>
+                  <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_facebook"></i></a></div>
+                  <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_twitter"></i></a></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__col">
+              <ul class="menu">
+                <li class="menu-item current-menu-item"><a href="#">Fundraising</a></li>
+                <li class="menu-item"><a href="#">What we do</a></li>
+                <li class="menu-item"><a href="#">Publications</a></li>
+                <li class="menu-item"><a href="#">Library</a></li>
+                <li class="menu-item"><a href="#">News</a></li>
+                <li class="menu-item"><a href="#">Write to us</a></li>
+                <li class="menu-item"><a href="#">Faq</a></li>
+                <li class="menu-item"><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer__col">
+              <div class="footer__form">
+                <div class="form__title">Subscribe to our newsletter and stay up to date with the latest updates</div>
+                <!-- begin form-->
+                <div class="form__content">
+                  <form class="form" action="send.php">
+                    <input type="hidden" name="subject" value="форма в футоре"/>
+                    <input type="hidden" name="notspam" value=""/>
+                    <div class="form__row">
+                      <input type="email" placeholder="Your E-mail"/>
+                    </div>
+                    <div class="form__row">
+                      <button class="btn" type="submit"><span>Subscribe to Newsletter</span></button>
+                    </div>
+                  </form>
+                </div>
+                <!-- end form-->
+                <div class="form__privacy">By clicking on the button you consent to the processing of personal data in accordance with the privacy policy</div>
+              </div>
+            </div>
+            <div class="footer__col"><a class="toTop" href="#wrapper"> </a></div>
+          </div>
+          <div class="footer__row snakeline"><span>All rights reserved © <script type="text/javascript">document.write(new Date().getFullYear());</script></span><a href="#">Conditions and wishes</a><a href="#">Privacy Policy</a><a href="#">By Deesse Media</a></div>
         </div>
       </footer>
-      <div class="toTop"><a href="#wrapper"> <i class="icon_to_top"></i></a></div>
       <!-- Begin Modal modalVideo-->
       <div class="modal fade modalVideo" id="modalVideo">
         <div class="modal-dialog">

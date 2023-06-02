@@ -5,7 +5,7 @@ body {
 	color: $main_color;
 	line-height: $main_line_height;
 	font-size: calc(.034 * 100vw + 0px);
-	// background-color: #101010;
+	background-color: $color_bg_primary;
 
 	@media (min-width: 768px) {
 		font-size: calc(.008333334 * 100vw + 0px);
@@ -33,6 +33,10 @@ body {
 	padding: 0 1em;
 	margin-left: auto;
 	margin-right: auto;
+
+	@media (min-width: 768px) {
+		padding: 0;
+	}
 }
 
 .section {
@@ -87,22 +91,20 @@ body {
 			content: '';
 			position: absolute;
 			display: inline-block;
-			width: 100%;
-			left: 0;
+			width: 0;
+			left: 50%;
 			bottom: -0.125em;
-			border-bottom: 0.125em solid;
-			border-color: inherit;
+			transform: translateX(-50%);
 
-			@media (min-width: 768px) {
-				transition: width 0.3s;
-			}
+			border-bottom: 0.0625em solid;
+			border-color: inherit;
+			transition: width 0.3s;
 		}
 
-		@media (min-width: 768px) {
-			&:hover {
-				&:after {
-					width: 65%;
-				}
+		&:hover {
+			&:after {
+				width: 100%;
+
 			}
 		}
 

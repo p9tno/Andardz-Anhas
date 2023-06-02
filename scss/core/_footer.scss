@@ -1,14 +1,130 @@
-/* Footer
- ----------------------------------------------------------------------------- */
 .footer {
-	position: relative;
-	padding: 1em 0;
-	background-color: #ddd;
+	padding: 1.25em 0;
 
 	&__content {
+		background-color: $color_bg_info;
+		color: $color_bg_primary;
+		border-radius: 2.5em;
 		@extend .container_center;
+	}
+
+	&__row {
 		display: flex;
 		justify-content: space-between;
-		align-items: center;
+
+		padding-left: 7.125em;
+		padding-right: 2.25em;
+
+		&:first-child {
+			padding-top: 7.5em;
+			padding-bottom: 8.75em;
+		}
+
+		&:last-child {
+			border-top: 0.0625em solid $color_bg_primary;
+			line-height: 1;
+			padding-top: 2.032em;
+			padding-bottom: 2.032em;
+
+			span {
+				color: $color_bg_primary;
+				font-size: 1.125em;
+
+			}
+
+			a {
+				text-transform: uppercase;
+				color: $color_bg_primary;
+				text-decoration: none;
+				font-size: 1.125em;
+				font-weight: 700;
+
+				&:hover {
+					color: $color_white;
+				}
+			}
+		}
 	}
+
+	&__form {
+		@media (min-width: 768px) {
+			width: 25.25em;
+		}
+	}
+
+	.logo__link {
+		font-size: 2em;
+	}
+
+	.toTop {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 4.625em;
+		height: 4.625em;
+		border-radius: 100%;
+		border: 0.0625em solid $color_bg_primary;
+		background-color: #F2EEE8;
+		text-decoration: none;
+		margin-right: 4em;
+
+		&:before {
+			content: '\e903';
+			font-family: $icon_font_famaly;
+			color: $color_bg_info;
+			font-size: 1.5em;
+
+		}
+
+		&:hover {
+			background-color: $color_white;
+		}
+	}
+
+	.menu {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	.menu-item {
+		margin-bottom: 0.75em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		a {
+			position: relative;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: $color_bg_primary;
+			font-size: 1.125em;
+			font-weight: 700;
+
+			&:after {
+				content: '';
+				position: absolute;
+				display: inline-block;
+				width: 0;
+				left: 0;
+				bottom: 0.0625em;
+				border-bottom: 0.0625em solid;
+				border-color: inherit;
+				transition: width 0.3s;
+			}
+
+		}
+
+		&.current-menu-item,
+		&:hover {
+			a {
+				&:after {
+					width: 100%;
+
+				}
+			}
+		}
+	}
+
 }

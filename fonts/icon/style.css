@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon';
-  src:  url('fonts/icon.eot?g4awz7');
-  src:  url('fonts/icon.eot?g4awz7#iefix') format('embedded-opentype'),
-    url('fonts/icon.ttf?g4awz7') format('truetype'),
-    url('fonts/icon.woff?g4awz7') format('woff'),
-    url('fonts/icon.svg?g4awz7#icon') format('svg');
+  src:  url('fonts/icon.eot?dv7ykq');
+  src:  url('fonts/icon.eot?dv7ykq#iefix') format('embedded-opentype'),
+    url('fonts/icon.ttf?dv7ykq') format('truetype'),
+    url('fonts/icon.woff?dv7ykq') format('woff'),
+    url('fonts/icon.svg?dv7ykq#icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,10 +25,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon_arrow_top1:before {
+.icon_close:before {
+  content: "\e914";
+}
+.icon_burger:before {
+  content: "\e915";
+}
+.icon_arrow_top:before {
   content: "\e903";
 }
-.icon_arrow_bottom1:before {
+.icon_arrow_bottom:before {
   content: "\e904";
 }
 .icon_arrow_right:before {
@@ -37,10 +43,10 @@
 .icon_arrow_left:before {
   content: "\e90e";
 }
-.icon_arrow_bottom:before {
+.icon_arrow_bottom_sm:before {
   content: "\e90a";
 }
-.icon_arrow_top:before {
+.icon_arrow_top_sm:before {
   content: "\e90b";
 }
 .icon_loup:before {
@@ -82,7 +88,6 @@
 .icon_instagram:before {
   content: "\e909";
 }
-.icon_Polygon-1:before {
+.icon_polygon:before {
   content: "\e90c";
-  color: #46264b;
 }

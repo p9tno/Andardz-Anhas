@@ -1,4 +1,54 @@
 footer.footer
     .footer__content
-        p <script type="text/javascript">document.write(new Date().getFullYear());</script>
 
+        .footer__row
+            .footer__col
+                .logo
+                    a.logo__link(href="/") Andardz-Anhas
+
+                .messenger
+                    .messenger__list
+                        .messenger__item
+                            a.messenger__link(href="#" target="_blank")
+                                i.icon_instagram
+                        .messenger__item
+                            a.messenger__link(href="#" target="_blank")
+                                i.icon_facebook
+                        .messenger__item
+                            a.messenger__link(href="#" target="_blank")
+                                i.icon_twitter
+            .footer__col
+                ul.menu
+                    li.menu-item.current-menu-item
+                        a(href="#") Fundraising
+                    each item in ['What we do', 'Publications', 'Library', 'News', 'Write to us', 'Faq', 'Contact', ]
+                        li.menu-item
+                            a(href="#")=item
+            .footer__col
+                .footer__form
+                    .form__title Subscribe to our newsletter and stay up to date with the latest updates
+                    // begin form
+                    .form__content
+                        form.form(action="send.php")
+                            input(type="hidden" name="subject" value="форма в футоре")
+                            input(type="hidden" name="notspam" value="")
+
+                            .form__row
+                                input(type="email" placeholder="Your E-mail")
+
+                            .form__row
+                                button.btn(type="submit")
+                                    span Subscribe to Newsletter
+                    // end form
+                    .form__privacy By clicking on the button you consent to the processing of personal data in accordance with the privacy policy
+
+            .footer__col
+                a.toTop(href="#wrapper") 
+
+
+
+        .footer__row.snakeline
+            span All rights reserved © <script type="text/javascript">document.write(new Date().getFullYear());</script>
+            a(href="#") Conditions and wishes
+            a(href="#") Privacy Policy
+            a(href="#") By Deesse Media

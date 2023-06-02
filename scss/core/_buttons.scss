@@ -2,65 +2,50 @@
 
 .btn {
 	display: inline-block;
-	padding: 1em 2em;
-	border-radius: 1em;
-	border: none;
+	padding: 1.469em 2em;
+
+	border: 0.125em solid;
+	border-radius: 6.25em;
+
 	outline: none;
 	max-width: 100%;
 
 	font-family: $main_font_family;
 	font-size: 1em;
-	font-weight: 400;
+	font-weight: 800;
 	text-decoration: none;
 	text-align: center;
+	text-transform: uppercase;
+	line-height: 1;
 
-	color: $main_color;
-	background-color: $color_primary;
-	
+	color: $btn_color;
+	background-color: #F4F1EA;
+	border-color: $btn_color;
+
 	cursor: pointer;
 	transition: 0.3s;
 
-	// градиент
-	// position: relative;
-	// z-index: 10;
-	// overflow: hidden;
-	//
-	// &:before {
-	// 	content: '';
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	z-index: -1;
-	// 	transition: width 0.5s;
-	// 	background-image: linear-gradient(90deg, $color_seccondary 0%, #e8b7be 100%);
-	// }
-	//
-	// &:hover {
-	// 	background-color: #fff;
-	// 	color: $color_withe;
-	// 	text-decoration: none;
-	//
-	// 	&:before {
-	// 		width: 150%;
-	// 	}
-	// }
+	span {
+		font-size: 1em;
 
-	&:hover {
-		background-color: $btn_default_bg_color_hover;
-		color: $btn_default_text_color;
+		&:after {
+			content: '\e90d';
+			font-family: $icon_font_famaly;
+			margin-left: 0.625em;
+		}
 	}
 
-	&:active,
-	&:focus {
-		background-color: $btn_default_bg_color_active;
-		color: $btn_default_text_color;
+	&:hover {
+		background-color: $color_white;
+	}
+
+	&:active {
+		background-color: #F4F1EA;
 	}
 
 	&:disabled {
-		color: red;
-		cursor: not-allowed;
+		// color: red;
+		// cursor: not-allowed;
 		// pointer-events: none;
 	}
 

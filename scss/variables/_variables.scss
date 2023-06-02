@@ -3,10 +3,13 @@
 $main_font_family: "Playfair Display";
 $second_font_family: "Kudryashev Display";
 $number_font_family: "Lovelace";
+$icon_font_famaly: 'icon';
+
 $main_line_height: 1.2;
 $main_font_size: 1em;
 
-$container_width: 117em;
+// $container_width: 119.5em;
+$container_width: 117.5em;
 
 $footer_height: auto;
 
@@ -22,9 +25,11 @@ $color_success: #36a566;
 $color_warning: #fca33e;
 $color_danger: #ff1a1a;
 $color_white: #ffffff;
+/* ======================================================================== */
+$btn_color: #5A3560;
 
 /* Grid */
-/* ======================================================================== */
+
 $grid_padding: 1.25em;
 /* 20/16 */
 

@@ -1,0 +1,15 @@
+.logo {
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    &__link {
+        text-decoration: none;
+        color: $color_primary;
+        font-weight: 600;
+        font-size: 1.625em;
+
+        &:hover {
+            color: $color_white;
+        }
+    }
+}
