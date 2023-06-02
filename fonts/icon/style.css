@@ -1,18 +1,18 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?emjvh7');
-  src:  url('fonts/icomoon.eot?emjvh7#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?emjvh7') format('truetype'),
-    url('fonts/icomoon.woff?emjvh7') format('woff'),
-    url('fonts/icomoon.svg?emjvh7#icomoon') format('svg');
+  font-family: 'icon';
+  src:  url('fonts/icon.eot?g4awz7');
+  src:  url('fonts/icon.eot?g4awz7#iefix') format('embedded-opentype'),
+    url('fonts/icon.ttf?g4awz7') format('truetype'),
+    url('fonts/icon.woff?g4awz7') format('woff'),
+    url('fonts/icon.svg?g4awz7#icon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon_"], [class*=" icon_"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: 'icon' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -25,18 +25,64 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-home:before {
+.icon_arrow_top1:before {
+  content: "\e903";
+}
+.icon_arrow_bottom1:before {
+  content: "\e904";
+}
+.icon_arrow_right:before {
+  content: "\e90d";
+}
+.icon_arrow_left:before {
+  content: "\e90e";
+}
+.icon_arrow_bottom:before {
+  content: "\e90a";
+}
+.icon_arrow_top:before {
+  content: "\e90b";
+}
+.icon_loup:before {
+  content: "\e90f";
+}
+.icon_bell:before {
+  content: "\e910";
+}
+.icon_edit:before {
+  content: "\e911";
+}
+.icon_upload:before {
+  content: "\e912";
+}
+.icon_mark:before {
+  content: "\e913";
+}
+.icon_phone:before {
   content: "\e900";
 }
-.icon-clock2:before {
-  content: "\e94f";
+.icon_email:before {
+  content: "\e901";
 }
-.icon-calendar:before {
-  content: "\e953";
+.icon_location:before {
+  content: "\e902";
 }
-.icon-printer:before {
-  content: "\e954";
+.icon_man:before {
+  content: "\e905";
 }
-.icon-arrow-down:before {
-  content: "\ea36";
+.icon_eyes:before {
+  content: "\e906";
+}
+.icon_twitter:before {
+  content: "\e907";
+}
+.icon_facebook:before {
+  content: "\e908";
+}
+.icon_instagram:before {
+  content: "\e909";
+}
+.icon_Polygon-1:before {
+  content: "\e90c";
+  color: #46264b;
 }

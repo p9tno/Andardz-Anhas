@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Lovelace';
+    src: url('Lovelace-Regular.eot');
+    src: url('Lovelace-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Lovelace-Regular.woff2') format('woff2'),
+        url('Lovelace-Regular.woff') format('woff'),
+        url('Lovelace-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

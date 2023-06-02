@@ -1,9 +1,7 @@
-@include font-face("Roboto", '../fonts/Roboto/Roboto-Medium', 500, normal);
-@include font-face("Roboto", '../fonts/Roboto/Roboto-Bold', bold, normal);
-@include font-face("Roboto", '../fonts/Roboto/Roboto-Light', 300, normal);
-@include font-face("Roboto", '../fonts/Roboto/Roboto-Regular', normal, normal);
+@include font-face("Kudryashev Display", '../fonts/KudryashevDisplay/KudryashevDisplay-Sans', 500, normal);
 
-@include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Bold', bold, normal);
-@include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Light', 300, normal);
-@include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Medium', 500, normal);
-@include font-face("Roboto Slab", '../fonts/Roboto_Slab/RobotoSlab-Regular', normal, normal);
+@include font-face("Lovelace", '../fonts/Lovelace/Lovelace-Regular', normal, normal);
+
+@include font-face("Playfair Display", '../fonts/Playfair_Display/PlayfairDisplay-SemiBold', 600, normal);
+@include font-face("Playfair Display", '../fonts/Playfair_Display/PlayfairDisplay-Regular', normal, normal);
+@include font-face("Playfair Display", '../fonts/Playfair_Display/PlayfairDisplay-Medium', 500, normal);

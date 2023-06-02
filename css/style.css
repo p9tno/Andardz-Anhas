@@ -8,59 +8,38 @@
 /* ======================================================================== */
 @import "../fonts/icon/style.css";
 @font-face {
-  font-family: "Roboto";
+  font-family: "Kudryashev Display";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Roboto/Roboto-Medium.eot?") format("eot"), url("../fonts/Roboto/Roboto-Medium.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto/Roboto-Medium.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Medium.svg#str-replace("Roboto", " ", "_")') format("svg");
+  src: url("../fonts/KudryashevDisplay/KudryashevDisplay-Sans.eot?") format("eot"), url("../fonts/KudryashevDisplay/KudryashevDisplay-Sans.woff2") format("woff2"), url("../fonts/KudryashevDisplay/KudryashevDisplay-Sans.woff") format("woff"), url("../fonts/KudryashevDisplay/KudryashevDisplay-Sans.ttf") format("truetype"), url('../fonts/KudryashevDisplay/KudryashevDisplay-Sans.svg#str-replace("Kudryashev Display", " ", "_")') format("svg");
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: bold;
-  src: url("../fonts/Roboto/Roboto-Bold.eot?") format("eot"), url("../fonts/Roboto/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto/Roboto-Bold.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Bold.svg#str-replace("Roboto", " ", "_")') format("svg");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/Roboto/Roboto-Light.eot?") format("eot"), url("../fonts/Roboto/Roboto-Light.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Light.woff") format("woff"), url("../fonts/Roboto/Roboto-Light.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Light.svg#str-replace("Roboto", " ", "_")') format("svg");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Roboto";
+  font-family: "Lovelace";
   font-style: normal;
   font-weight: normal;
-  src: url("../fonts/Roboto/Roboto-Regular.eot?") format("eot"), url("../fonts/Roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto/Roboto-Regular.ttf") format("truetype"), url('../fonts/Roboto/Roboto-Regular.svg#str-replace("Roboto", " ", "_")') format("svg");
+  src: url("../fonts/Lovelace/Lovelace-Regular.eot?") format("eot"), url("../fonts/Lovelace/Lovelace-Regular.woff2") format("woff2"), url("../fonts/Lovelace/Lovelace-Regular.woff") format("woff"), url("../fonts/Lovelace/Lovelace-Regular.ttf") format("truetype"), url('../fonts/Lovelace/Lovelace-Regular.svg#str-replace("Lovelace", " ", "_")') format("svg");
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto Slab";
+  font-family: "Playfair Display";
   font-style: normal;
-  font-weight: bold;
-  src: url("../fonts/Roboto_Slab/RobotoSlab-Bold.eot?") format("eot"), url("../fonts/Roboto_Slab/RobotoSlab-Bold.woff2") format("woff2"), url("../fonts/Roboto_Slab/RobotoSlab-Bold.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Bold.ttf") format("truetype"), url('../fonts/Roboto_Slab/RobotoSlab-Bold.svg#str-replace("Roboto Slab", " ", "_")') format("svg");
+  font-weight: 600;
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-SemiBold.eot?") format("eot"), url("../fonts/Playfair_Display/PlayfairDisplay-SemiBold.woff2") format("woff2"), url("../fonts/Playfair_Display/PlayfairDisplay-SemiBold.woff") format("woff"), url("../fonts/Playfair_Display/PlayfairDisplay-SemiBold.ttf") format("truetype"), url('../fonts/Playfair_Display/PlayfairDisplay-SemiBold.svg#str-replace("Playfair Display", " ", "_")') format("svg");
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto Slab";
+  font-family: "Playfair Display";
   font-style: normal;
-  font-weight: 300;
-  src: url("../fonts/Roboto_Slab/RobotoSlab-Light.eot?") format("eot"), url("../fonts/Roboto_Slab/RobotoSlab-Light.woff2") format("woff2"), url("../fonts/Roboto_Slab/RobotoSlab-Light.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Light.ttf") format("truetype"), url('../fonts/Roboto_Slab/RobotoSlab-Light.svg#str-replace("Roboto Slab", " ", "_")') format("svg");
+  font-weight: normal;
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-Regular.eot?") format("eot"), url("../fonts/Playfair_Display/PlayfairDisplay-Regular.woff2") format("woff2"), url("../fonts/Playfair_Display/PlayfairDisplay-Regular.woff") format("woff"), url("../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") format("truetype"), url('../fonts/Playfair_Display/PlayfairDisplay-Regular.svg#str-replace("Playfair Display", " ", "_")') format("svg");
   font-display: swap;
 }
 @font-face {
-  font-family: "Roboto Slab";
+  font-family: "Playfair Display";
   font-style: normal;
   font-weight: 500;
-  src: url("../fonts/Roboto_Slab/RobotoSlab-Medium.eot?") format("eot"), url("../fonts/Roboto_Slab/RobotoSlab-Medium.woff2") format("woff2"), url("../fonts/Roboto_Slab/RobotoSlab-Medium.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Medium.ttf") format("truetype"), url('../fonts/Roboto_Slab/RobotoSlab-Medium.svg#str-replace("Roboto Slab", " ", "_")') format("svg");
-  font-display: swap;
-}
-@font-face {
-  font-family: "Roboto Slab";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Roboto_Slab/RobotoSlab-Regular.eot?") format("eot"), url("../fonts/Roboto_Slab/RobotoSlab-Regular.woff2") format("woff2"), url("../fonts/Roboto_Slab/RobotoSlab-Regular.woff") format("woff"), url("../fonts/Roboto_Slab/RobotoSlab-Regular.ttf") format("truetype"), url('../fonts/Roboto_Slab/RobotoSlab-Regular.svg#str-replace("Roboto Slab", " ", "_")') format("svg");
+  src: url("../fonts/Playfair_Display/PlayfairDisplay-Medium.eot?") format("eot"), url("../fonts/Playfair_Display/PlayfairDisplay-Medium.woff2") format("woff2"), url("../fonts/Playfair_Display/PlayfairDisplay-Medium.woff") format("woff"), url("../fonts/Playfair_Display/PlayfairDisplay-Medium.ttf") format("truetype"), url('../fonts/Playfair_Display/PlayfairDisplay-Medium.svg#str-replace("Playfair Display", " ", "_")') format("svg");
   font-display: swap;
 }
 * {
@@ -521,16 +500,17 @@ template {
 }
 
 body {
-  font-family: "Roboto";
-  color: #000;
+  font-family: "Playfair Display";
+  color: #78716A;
   line-height: 1.2;
   font-size: calc(.034 * 100vw + 0px);
 }
 @media (min-width: 768px) {
   body {
-    font-size: calc(.00838 * 100vw + 0px);
+    font-size: calc(.008333334 * 100vw + 0px);
   }
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -546,7 +526,7 @@ body {
 }
 
 .container_center, .footer__content, .header__content {
-  max-width: 80em;
+  max-width: 117em;
   padding: 0 1em;
   margin-left: auto;
   margin-right: auto;
@@ -556,7 +536,7 @@ body {
   padding: 2em 0;
 }
 .section__title {
-  font-family: "Roboto Slab";
+  font-family: "Kudryashev Display";
   font-weight: 400;
 }
 
@@ -779,7 +759,7 @@ body {
     right: 1em;
     width: 1.25em;
     height: 0.875em;
-    color: #000;
+    color: #78716A;
     border: 0.125em solid;
     border-left: 0;
     border-right: 0;
@@ -813,7 +793,7 @@ body {
   }
   .header__toggle_open:after, .header__toggle_open:before {
     content: "";
-    border-top: 0.125em solid #000;
+    border-top: 0.125em solid #78716A;
   }
   .header__toggle_open:before {
     transform: rotate(45deg);
@@ -885,8 +865,8 @@ body {
   }
 }
 .menu-item a {
-  font-family: "Roboto Slab";
-  color: #000;
+  font-family: "Kudryashev Display";
+  color: #78716A;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -1047,8 +1027,8 @@ input[type=url],
 textarea {
   background-color: #fff;
   border: 0.0625em solid #ddd;
-  font-family: "Roboto";
-  color: #000;
+  font-family: "Playfair Display";
+  color: #78716A;
   padding: 0.5em 1em;
   outline: none;
   font-size: 1em;
@@ -1274,7 +1254,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 }
 .select2-container--default .select2-results__option--selected {
   background: rgba(0, 110, 255, 0.19);
-  color: #000;
+  color: #78716A;
 }
 .select2-container--default .select2-dropdown {
   position: absolute;
@@ -1288,8 +1268,8 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 .select2-container--default .select2-selection {
   background: #FFFFFF;
   border: 1px solid #DBDBDB;
-  font-family: "Roboto";
-  color: #000;
+  font-family: "Playfair Display";
+  color: #78716A;
   padding: 0.65em 1em;
   outline: none;
   font-weight: 400;
@@ -1316,7 +1296,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 .select2-container--default .select2-selection--single .select2-selection__rendered {
   line-height: 1;
   padding: 0 1em 0 0;
-  color: #000;
+  color: #78716A;
 }
 .select2-container--default .select2-selection--single .select2-selection__placeholder {
   color: #ddd;
@@ -1383,8 +1363,8 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 .select2-container--default.select2-container--disabled .select2-selection {
   background: #FFFFFF;
   border: 1px solid #DBDBDB;
-  font-family: "Roboto";
-  color: #000;
+  font-family: "Playfair Display";
+  color: #78716A;
   padding: 0.971em 1.175em;
   outline: none;
   font-weight: 400;
@@ -1430,7 +1410,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   }
 }
 .breadcrumbs .kama_breadcrumbs .kb_title {
-  color: #000;
+  color: #78716A;
   font-weight: 600;
 }
 
@@ -1441,23 +1421,23 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   border: none;
   outline: none;
   max-width: 100%;
-  font-family: "Roboto";
+  font-family: "Playfair Display";
   font-size: 1em;
   font-weight: 400;
   text-decoration: none;
   text-align: center;
-  color: #000;
-  background-color: #7b8287;
+  color: #78716A;
+  background-color: #ECE7DE;
   cursor: pointer;
   transition: 0.3s;
 }
 .btn:hover {
   background-color: #cbcbcb;
-  color: #000;
+  color: #78716A;
 }
 .btn:active, .btn:focus {
   background-color: #c4c4c4;
-  color: #000;
+  color: #78716A;
 }
 .btn:disabled {
   color: red;
@@ -1581,7 +1561,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   display: inline-block;
 }
 .drop__toggle {
-  border: 0.0625em solid #000;
+  border: 0.0625em solid #78716A;
   padding: 0.3125em 1em;
   position: relative;
   z-index: 1;
@@ -1590,7 +1570,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   align-items: center;
   border-radius: 1em;
   width: 100%;
-  background-color: #7b8287;
+  background-color: #ECE7DE;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -1608,7 +1588,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 .drop__list {
   position: absolute;
   width: 100%;
-  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0.25em rgba(120, 113, 106, 0.3);
   border-radius: 0 0 0.3125em 0.3125em;
   height: 0;
   overflow: hidden;
@@ -1623,7 +1603,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
 }
 .drop__item {
   background: #ffffff;
-  border-bottom: 0.0625em solid #000;
+  border-bottom: 0.0625em solid #78716A;
   padding: 0.3125em 1em;
 }
 .drop__item:hover {
@@ -1655,7 +1635,7 @@ input[type=checkbox]:disabled:checked:before, input[type=checkbox]:disabled:inde
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
+  color: #78716A;
 }
 .modal-close:after, .modal-close:before {
   content: "";

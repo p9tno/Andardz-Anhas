@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Kudryashev Display';
+    src: url('KudryashevDisplay-Sans.eot');
+    src: url('KudryashevDisplay-Sans.eot?#iefix') format('embedded-opentype'),
+        url('KudryashevDisplay-Sans.woff2') format('woff2'),
+        url('KudryashevDisplay-Sans.woff') format('woff'),
+        url('KudryashevDisplay-Sans.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
