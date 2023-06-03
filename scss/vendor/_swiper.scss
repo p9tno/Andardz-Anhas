@@ -1,0 +1,114 @@
+.swiper_nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 8.875em;
+    margin: 3.125em auto 0;
+
+    i {
+        font-size: 1.25em;
+        cursor: pointer;
+        color: rgba($btn_color, 0.3);
+        transition: 0.3s;
+
+        &:hover {
+            color: rgba($btn_color, 1);
+        }
+    }
+}
+
+.swiper_fraction {
+    font-family: $number_font_family;
+    color: $btn_color;
+    font-size: 1.5em;
+    width: fit-content;
+
+    transform: translateY(0.125em);
+    // line-height: 1;
+    // margin: 0 1.75em;
+}
+
+// .swiper__dotted {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 1.25em 0;
+//
+//     .swiper-pagination-bullet {
+//         background-color: rgba($main_color, 0.2);
+//         opacity: 1;
+//         border-radius: 50%;
+//
+//         margin: 0 0.25em !important;
+//         width: 0.5em;
+//         height: 0.5em;
+//
+//         transition: 0.3s;
+//
+//     }
+//
+//     .swiper-pagination-bullet-active {
+//         background-color: rgba($main_color, 1);
+//     }
+//
+//     &_reverse {
+//         .swiper-pagination-bullet {
+//             background-color: rgba($color_white, 0.2);
+//         }
+//
+//         .swiper-pagination-bullet-active {
+//             background-color: rgba($color_white, 1);
+//         }
+//     }
+// }
+//
+// .swiper-slide {
+//     height: auto;
+//     // @media (min-width: 768px) {}
+// }
+//
+// .swiper__arrows {
+//
+//     position: absolute;
+//     top: 20em;
+//     left: 0;
+//     width: 100%;
+//
+//     display: flex;
+//     justify-content: space-between;
+//
+//     i {
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+//
+//         width: 3.75em;
+//         height: 3.75em;
+//         border: 1px solid;
+//         border-color: #9DAFB5;
+//         border-radius: 100%;
+//
+//         color: #9DAFB5;
+//
+//         cursor: pointer;
+//         outline: none;
+//         transition: 0.3s;
+//
+//         &:before {
+//             font-size: 0.875em;
+//         }
+//
+//         &:hover {
+//             color: $main_color;
+//             border-color: $main_color;
+//         }
+//
+//         &.swiper-button-disabled {
+//             color: rgba($color_primary, 0.25);
+//             border-color: rgba($color_primary, 0.25);
+//             cursor: not-allowed;
+//         }
+//
+//     }
+//
+// }
