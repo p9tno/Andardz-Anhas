@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+  .faq__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+.faq__grid {
+  margin-top: 5em;
+}
+@media (min-width: 768px) {
+  .faq__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(172px, auto);
+  }
+}

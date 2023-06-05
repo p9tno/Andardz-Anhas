@@ -1,0 +1,62 @@
+.platform {
+    padding-top: 0.625em;
+
+    &__wrap {
+        position: relative;
+        @media (min-width: 768px) {
+            min-height: 47.75em;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__content {
+        position: relative;
+        padding-top: 12.5em;
+        padding-bottom: 11.25em;
+
+        text-align: center;
+
+        @media (min-width: 768px) {
+            width: 65em;
+            margin: 0 auto;
+        }
+
+        p {
+            margin: 2.25em 0 0;
+            color: #ECE7DE;
+            line-height: 1.4;
+
+            @media (min-width: 768px) {
+                width: 31.25em;
+                margin: 2.25em auto 0;
+            }
+        }
+    }
+
+    &__action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 3.25em;
+
+        > * {
+            margin: 0 0.375em;
+        }
+
+        b {
+
+            text-transform: uppercase;
+            font-size: 1em;
+            font-weight: 700;
+            color: #F4F1EA;
+        }
+    }
+
+}

@@ -1,0 +1,94 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 6.25em 0;
+
+    > * {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 1.875em;
+        height: 1.875em;
+        border-radius: 100%;
+        padding-top: 0.2em;
+        margin: 0 0.125em;
+
+        border: 1px solid;
+
+        color: #ACA092;
+        border-color: transparent;
+        background-color: transparent;
+
+        font-family: $number_font_family;
+        font-size: 2em;
+        letter-spacing: -0.04em;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        transition: 0.3s;
+
+        &:hover {
+            color: $color_info;
+        }
+
+        &.dots,
+        &.next,
+        &.prev {
+            border: 0;
+            background-color: transparent;
+            color: #ACA092;
+
+        }
+
+        &.next,
+        &.prev {
+            padding: 0;
+            cursor: pointer;
+
+            &:before {
+                font-family: $icon_font_famaly;
+                font-size: 0.6534em;
+            }
+
+            &:hover {
+                color: $color_info;
+            }
+        }
+
+        &.next {
+            &:before {
+                content: '\e90d';
+
+            }
+        }
+
+        &.prev {
+            &:before {
+                content: '\e90e';
+
+            }
+        }
+
+        &:hover {
+            &.dots {
+                color: #ACA092;
+            }
+        }
+
+        a {
+            &:hover {
+                color: $color_info;
+            }
+        }
+
+        &.current {
+            border-color: $color_info;
+            background-color: #F2EEE8;
+            color: $color_info;
+        }
+    }
+
+}

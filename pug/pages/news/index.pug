@@ -1,0 +1,53 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+
+block content
+
+    // begin breadcrumbs
+    section#breadcrumbs.breadcrumbs.section
+        .container_center.container_center_sm
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Main 
+
+                span.aioseo-breadcrumb-separator &middot;
+
+                span.aioseo-breadcrumb News
+
+
+    // end breadcrumbs
+
+    // begin news
+    section#news.news.news_archive.section
+        .container_center.container_center_sm
+            h1.section__title
+                span News
+            .news__grid
+                each item in [1,2,1,2,1,2,1,2]
+                    .news__item.br
+                        .news__content
+                            .news__title Сonstruction of the Marble Fountain and Pool
+                            .news__excerpt
+                                p In "Ayg" Armenological and Esoteric School-Center, we have started the construction of the Marble Fountain and Pool for the esoteric experience of our students. <a href="#">Learn more</a>
+
+                            .news__info
+                                span Art and culture
+                                span 20.04.2023
+                        .news__img.img.br
+                            img(src="../../img/news_sm_"+item+".jpg", alt="alt")
+
+            // start pagination
+            .pagination
+                a.prev
+                span.current 1
+                a(href="#") 2
+                span.dots ...
+                a(href="#") 10
+                a.next
+
+            // end pagination
+
+    // end news

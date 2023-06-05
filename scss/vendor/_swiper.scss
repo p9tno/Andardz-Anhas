@@ -2,8 +2,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 8.875em;
-    margin: 3.125em auto 0;
 
     i {
         font-size: 1.25em;
@@ -13,6 +11,59 @@
 
         &:hover {
             color: rgba($btn_color, 1);
+        }
+
+    }
+
+    &_circle {
+        width: 14.0625em;
+
+        i {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 3.1em;
+            height: 3.1em;
+            border-radius: 100%;
+            border: 0.0625em solid;
+        }
+
+        .swiper_fraction {
+            font-size: 1.25em;
+        }
+    }
+}
+
+.swiper_arrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 4.375em;
+
+    i {
+        font-size: 1.25em;
+        cursor: pointer;
+        color: rgba($btn_color, 0.3);
+        transition: 0.3s;
+
+        &:hover {
+            color: rgba($btn_color, 1);
+        }
+    }
+
+    &_circle {
+        i {
+            flex: none;
+            color: $color_primary;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 3.1em;
+            height: 3.1em;
+            border-radius: 100%;
+            border: 0.0625em solid;
         }
     }
 }

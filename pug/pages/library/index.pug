@@ -1,0 +1,117 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+
+block content
+
+    // begin breadcrumbs
+    section#breadcrumbs.breadcrumbs.section
+        .container_center.container_center_sm
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Main 
+
+                span.aioseo-breadcrumb-separator &middot;
+
+                span.aioseo-breadcrumb Library
+
+
+    // end breadcrumbs
+
+    // begin library
+    section#library.library.section.pt_0
+        .container_center.container_center_sm
+            h2.section__title
+                span Library
+
+            .library__genre
+                ul.cat-list
+                    li.cat-item.current-cat
+                        a(href="#") Genre of fairy tale
+                    each item in [1,2,3,4,5]
+                        li.cat-item
+                            a(href="#") Genre of fairy tale
+
+            .library__grid
+
+                //- start library item
+                .library__item.library__item_video.br
+                    .library__top
+                        .video
+                            .video__wrap.img
+                                img(src="../../img/video_img.jpg", alt="alt")
+                            .video__play
+
+                    .library__main
+
+                        .library__caption
+                            a.library__title(href="#") Sasuntsi David
+                            .library__cat 
+                                span fairy tales
+
+                        .library__excerpt
+                            p The Armenian epic "Sasuntsi David" tells the story of the legendary hero David of Sasun and his battles against foreign invaders. The story contains themes of heroism <a href="#">READ MORE</a>
+
+                    .library__bottom
+
+                        .info
+                            .info__img.img
+                                img(src="../../img/info_1.jpg", alt="alt")
+                            .info__label
+                                span Fairy tale author
+                                span Reading: Storyteller
+
+                //- end library item
+
+                each item in ['', '', '', '', '', '', '', '', ]
+                    .library__item.br
+                        .library__main
+
+                            .library__caption
+                                a.library__title(href="#") Moral Principles in the Epic J.A Ghazaryan
+                                .library__cat 
+                                    span fairy tales
+
+                            .library__excerpt
+                                p "Moral Principles in the Epic" by J.A. Ghazaryan is a book that explores the moral values and ethical principles depicted in Armenian national epic poetry. It delves into the themes of courage, loyalty, justice, and love, as well as the portrayal of heroes and their deeds in the context of Armenian culture.
+                                p "Moral Principles in the Epic" by J.A. Ghazaryan is a book that explores the moral values and ethical principles depicted in Armenian national epic poetry. It delves into the themes of courage, loyalty, justice, and love, as well as the portrayal of heroes and their deeds in the context of Armenian culture and history. READ MORE <a href="#">READ MORE</a>
+
+                        .library__bottom
+
+                            .info
+                                .info__img.img
+                                    img(src="../../img/info_1.jpg", alt="alt")
+                                .info__label
+                                    span Fairy tale author
+                                    span 20.04.2023
+
+
+
+
+
+
+            // start pagination
+            .pagination
+                a.prev
+                span.current 1
+                a(href="#") 2
+                span.dots ...
+                a(href="#") 10
+                a.next
+
+            // end pagination
+
+
+
+
+
+
+
+
+
+
+
+
+    // end library

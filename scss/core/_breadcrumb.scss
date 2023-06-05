@@ -1,50 +1,32 @@
 .breadcrumbs {
-	padding-bottom: 0;
+	padding-top: 3.125em;
+	padding-bottom: 2.375em;
 
-	.kama_breadcrumbs {
-		a {
-			text-decoration: none;
-		}
-
+	.aioseo-breadcrumbs {
 		a,
 		span {
-			color: #B3B3B3;
+			letter-spacing: 0.02em;
 		}
 
 		span {
-			// font-size: 0.6em;
-			@media (min-width: 768px) {
-				// font-size: 0.875em;
-			}
-
-			> a {
-				> span {
-					font-size: 1em;
-				}
-			}
+			font-size: 1em;
+			color: $btn_color;
 		}
 
-		.kb_sep {
-			transform: translateY(-0.15em);
-			display: inline-block;
-			margin: 0 0.75em;
-
-			width: 0.3125em;
-			height: 0.3125em;
-			background-color: $color_warning;
-			font-size: 0.6em;
-			@media (min-width: 768px) {
-				font-size: 1em;
-
-			}
+		a {
+			text-decoration: none;
+			font-size: 1em;
+			font-weight: 400;
+			font-style: normal;
+			color: #9F9383;
 
 		}
 
-		.kb_title {
-			color: $main_color;
-			font-weight: 600;
+		.aioseo-breadcrumb-separator {
+			margin-left: 0.5em;
+			margin-right: 0.7em;
+			color: #9F9383;
 		}
-
 	}
 
 }

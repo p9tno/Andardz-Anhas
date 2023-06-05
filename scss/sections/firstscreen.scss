@@ -1,4 +1,18 @@
 .firstscreen {
+    .swiper_nav {
+        i {
+            &.swiper-button-disabled {
+
+                color: rgba($btn_color, 0.1);
+                cursor: not-allowed;
+
+            }
+        }
+    }
+
+    .section__title {
+        color: $btn_color;
+    }
     padding-top: 0;
     padding-bottom: 0.625em;
 
@@ -59,12 +73,34 @@
 
     &__slider {
         flex: none;
-        width: 21.5625em;
+        width: 24.5625em;
+        overflow: hidden;
+
+        .swiper {
+            margin: 0 0 0 0.75em;
+            overflow: visible;
+            width: 21.5625em;
+        }
+
+        .swiper_nav {
+            width: 8.875em;
+            margin: 3.125em auto 0;
+        }
+
+        .swiper-slide {
+            opacity: 0;
+            transition: 0.3s;
+
+            &.show {
+                opacity: 1;
+            }
+        }
+
     }
 
     &__circle {
-        width: 100%;
-        height: 6em;
+        width: 5.75em;
+        height: 5.75em;
     }
 
 }

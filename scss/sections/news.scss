@@ -1,0 +1,143 @@
+.news {
+    padding: 0.625em 0;
+
+    &_archive {
+        padding: 0;
+    }
+
+    &__wrap {
+        position: relative;
+    }
+
+    &__head {
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 7em;
+            left: 5em;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 52.5em;
+        }
+    }
+
+    &__slider {
+        .news__item {
+            min-height: 40.875em;
+            padding: 15em 4.75em 5em;
+            border: 0.1875em solid $btn_color;
+        }
+
+        .news__img {
+            width: 55.5em;
+        }
+
+        .news__content {
+            width: 27.1875em;
+        }
+
+        .news__info {
+            margin-top: 2.8125em;
+        }
+    }
+
+    &__grid {
+        margin-top: 4.375em;
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-auto-rows: minmax(23.25em, auto);
+            grid-gap: 1.25em;
+        }
+
+        .news__item {
+            padding: 3.875em;
+        }
+
+        .news__img {
+            width: 22.625em;
+        }
+
+        .news__content {
+            width: 23.375em;
+        }
+    }
+
+    &__item {
+        position: relative;
+
+        display: flex;
+        justify-content: space-between;
+
+        background: #F4F1EA;
+        border: 0.125em solid $btn_color;
+
+    }
+
+    &__content {}
+
+    &__title {
+        min-height: 2.1875em;
+
+        font-size: 2em;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+
+        color: $color_info;
+    }
+
+    &__excerpt {
+        margin-top: 1.75em;
+
+        p {
+            line-height: 1.334;
+            margin: 0;
+            min-height: 4em;
+
+            a {
+                font-size: 1em;
+                font-weight: 700;
+                color: $color_info;
+                text-transform: uppercase;
+            }
+
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        margin-top: 2em;
+
+        span {
+            &:first-child {
+                display: inline-block;
+                line-height: 1;
+                text-transform: uppercase;
+                font-size: 0.875em;
+                font-weight: 700;
+                padding: 0.65em 0.913em;
+                border-radius: 7.125em;
+                color: $color_bg_primary;
+                background-color: $btn_color;
+            }
+
+            &:last-child {
+                display: inline-block;
+                font-size: 1.5em;
+                font-family: $second_font_family;
+                transform: translateY(0.125em);
+                margin-left: 1.75em;
+            }
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: -0.125em;
+        bottom: -0.125em;
+        right: -0.125em;
+    }
+
+}
