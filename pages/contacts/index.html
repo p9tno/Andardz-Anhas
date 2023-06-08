@@ -11,37 +11,66 @@
   <body>
     <div class="wrapper" id="wrapper">
       <header class="header">
-        <div class="header__row">
-          <div class="header__col">
-            <div class="logo"><a class="logo__link" href="/">Andardz-Anhas</a></div>
-          </div>
-          <div class="header__col">
-            <div class="toggle">Menu</div>
-            <div class="language">
-              <div class="language__label">Language:&nbsp; </div>
-              <div class="language__list">
-                <div class="language__item">Eng</div>
+        <div class="header__content">
+          <div class="header__row">
+            <div class="header__col">
+              <div class="logo"><a class="logo__link" href="/">Andardz-Anhas</a></div>
+            </div>
+            <div class="header__col">
+              <div class="toggle">Menu</div>
+              <div class="language desktop">
+                <div class="language__toggle">Language:&nbsp;<span>Eng</span></div>
+                <div class="language__list"><a class="language__item" href="#">
+                    <div class="language__flag"><img src="../../img/1.svg" alt="alt"/></div><span>Eng</span></a><a class="language__item" href="#">
+                    <div class="language__flag"><img src="../../img/2.svg" alt="alt"/></div><span>rus</span></a><a class="language__item" href="#">
+                    <div class="language__flag"><img src="../../img/3.svg" alt="alt"/></div><span>ՀԱՅ</span></a></div>
               </div>
             </div>
-          </div>
-          <div class="header__col">
-            <div class="search"><a class="search__link" href="#">Search</a></div>
-            <div class="registration"><a class="btn" href="#"><span>registration</span></a></div>
+            <div class="header__col desktop">
+              <div class="search"><a class="search__link" href="#">Search</a></div>
+              <div class="registration"><a class="btn" href="#"><span>registration</span></a></div>
+            </div>
           </div>
           <div class="header__nav">
-            <div class="navbar__close"></div>
-            <nav class="navbar" id="navbar">
-              <ul class="menu">
-                <li class="menu-item current-menu-item"><a href="#">Fundraising</a></li>
-                <li class="menu-item"><a href="#">What we do</a></li>
-                <li class="menu-item"><a href="#">Publications</a></li>
-                <li class="menu-item"><a href="#">Library</a></li>
-                <li class="menu-item"><a href="#">News</a></li>
-                <li class="menu-item"><a href="#">Write to us</a></li>
-                <li class="menu-item"><a href="#">Faq</a></li>
-                <li class="menu-item"><a href="#">Contact</a></li>
-              </ul>
-            </nav>
+            <div class="navbar__row">
+              <div class="navbar__close desktop"></div>
+              <nav class="navbar" id="navbar">
+                <ul class="menu">
+                  <li class="menu-item current-menu-item"><a href="#">Fundraising</a></li>
+                  <li class="menu-item"><a href="#">What we do</a></li>
+                  <li class="menu-item"><a href="#">Publications</a></li>
+                  <li class="menu-item"><a href="#">Library</a></li>
+                  <li class="menu-item"><a href="#">News</a></li>
+                  <li class="menu-item"><a href="#">Write to us</a></li>
+                  <li class="menu-item"><a href="#">Faq</a></li>
+                  <li class="menu-item"><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="navbar__row mobile">              
+              <div class="language">
+                <div class="language__toggle">Language:&nbsp;<span>Eng</span></div>
+                <div class="language__list"><a class="language__item" href="#">
+                    <div class="language__flag"><img src="../../img/1.svg" alt="alt"/></div><span>Eng</span></a><a class="language__item" href="#">
+                    <div class="language__flag"><img src="../../img/2.svg" alt="alt"/></div><span>rus</span></a><a class="language__item" href="#">
+                    <div class="language__flag"><img src="../../img/3.svg" alt="alt"/></div><span>ՀԱՅ</span></a></div>
+              </div>
+            </div>
+            <div class="navbar__row mobile">
+              <div class="search">
+                <form class="search__form">
+                  <input class="search__input" type="text" placeholder="Search" value="" name="s" autocomplete="off"/>
+                  <button class="search__btn"><i class="icon_loup"></i></button>
+                </form>
+              </div>
+            </div>
+            <div class="navbar__row mobile"><a class="btn" href="#"><span>registration</span></a></div>
+          </div>
+          <div class="search__wrap desktop">
+            <form class="search__form">
+              <input class="search__input" type="text" placeholder="Search" value="" name="s" autocomplete="off"/>
+              <button class="search__btn"><i class="icon_loup"></i></button>
+            </form>
           </div>
         </div>
       </header>
@@ -234,7 +263,7 @@
           <div class="footer__row">
             <div class="footer__col">
               <div class="logo"><a class="logo__link" href="/">Andardz-Anhas</a></div>
-              <div class="messenger">
+              <div class="messenger desktop">
                 <div class="messenger__list">
                   <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_instagram"></i></a></div>
                   <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_facebook"></i></a></div>
@@ -274,9 +303,11 @@
                 <div class="form__privacy">By clicking on the button you consent to the processing of personal data in accordance with the privacy policy</div>
               </div>
             </div>
-            <div class="footer__col"><a class="toTop" href="#wrapper"> </a></div>
           </div>
-          <div class="footer__row snakeline"><span>All rights reserved © <script type="text/javascript">document.write(new Date().getFullYear());</script></span><a href="#">Conditions and wishes</a><a href="#">Privacy Policy</a><a href="#">By Deesse Media</a></div>
+          <div class="footer__row footer__row_last snakeline">
+            <div class="footer__col"><span>All rights reserved © <script type="text/javascript">document.write(new Date().getFullYear());</script></span><a href="#">Conditions and wishes</a><a href="#">Privacy Policy</a><a href="#">By Deesse Media</a></div>
+          </div><a class="toTop" href="#wrapper">
+            <div class="toTop__arrow"></div><span>Back To Top</span></a>
         </div>
       </footer>
       <!-- Begin Modal modalVideo-->

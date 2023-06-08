@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../..//style.css"/>
   </head>
   <body>
     <div class="wrapper" id="wrapper">
@@ -75,21 +75,44 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin projectNaw-->
-        <section class="projectNaw section" id="projectNaw">
-          <div class="container_center">
-            <h2 class="section__title"><span>Навигация по проекту</span></h2>
-            <ul style="font-size:1.25em;">
-              <li><a href="../pages/home/">Главная </a></li>
-              <li><a href="../pages/news/">Новости (архив) </a></li>
-              <li><a href="../pages/library/">Библиотека (архив) </a></li>
-              <li><a href="../pages/fundraising/">Cбор средств (архив) </a></li>
-              <li><a href="../pages/faq/">faq (архив) </a></li>
-              <li><a href="../pages/feedback/">feedback</a></li>
-            </ul>
+        <!-- begin breadcrumbs-->
+        <section class="breadcrumbs section" id="breadcrumbs">
+          <div class="container_center container_center_sm">
+            <div class="aioseo-breadcrumbs"><span class="aioseo-breadcrumb"><a href="#">Main </a></span><span class="aioseo-breadcrumb-separator">&middot;</span><span class="aioseo-breadcrumb">Feedback</span></div>
           </div>
         </section>
-        <!-- end projectNaw-->
+        <!-- end breadcrumbs-->
+        <!-- begin question-->
+        <section class="question question_feedback section pt_0" id="question">
+          <div class="container_center container_center_sm">
+            <div class="question__content">
+              <h1 class="section__title"> <span>Write to support</span></h1>
+              <div class="question__form">
+                <form class="form form_sm" action="send.php">
+                  <input type="hidden" name="subject" value="форма в футоре"/>
+                  <input type="hidden" name="notspam" value=""/>
+                  <div class="form__row">
+                    <input type="text" placeholder="Name"/>
+                  </div>
+                  <div class="form__row">
+                    <input type="email" placeholder="E-mail"/>
+                  </div>
+                  <div class="form__row">
+                    <textarea type="text" placeholder="Еnter your message"></textarea>
+                  </div>
+                  <div class="form__row form__row_group">
+                    <label class="form__check">
+                      <input type="checkbox" checked="checked"/><span>I confirm my agreement with the rules for the provision of <a href="#" target="_blank">information services</a></span>
+                    </label>
+                    <button class="btn btn_reverse" type="submit"><span>Send</span></button>
+                  </div>
+                </form>
+              </div>
+              <div class="question__img img br"><img src="../../img/feedback.webp" alt="alt"/></div>
+            </div>
+          </div>
+        </section>
+        <!-- end question-->
       </main>
       <footer class="footer">
         <div class="footer__content">
@@ -163,12 +186,12 @@
         </div>
       </div>
       <!-- End modal info-->
-      <script src="js/jquery.js"></script>
-      <script src="js/modal.js"></script>
-      <script src="js/swiper-bundle.min.js"></script>
-      <script src="js/slider.js"></script>
-      <script src="js/select2.min.js"></script>
-      <script src="js/function.js"></script>
+      <script src="../../js/jquery.js"></script>
+      <script src="../../js/modal.js"></script>
+      <script src="../../js/swiper-bundle.min.js"></script>
+      <script src="../../js/slider.js"></script>
+      <script src="../../js/select2.min.js"></script>
+      <script src="../../js/function.js"></script>
     </div>
   </body>
 </html>

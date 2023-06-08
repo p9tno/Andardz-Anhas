@@ -1,11 +1,22 @@
 /* Header
  ----------------------------------------------------------------------------- */
 .header {
-	padding: 1.25em 0;
+
+	padding-top: 0.625em;
+	padding-bottom: 0.625em;
+	@media (min-width: 768px) {
+		padding-top: 1.25em;
+		padding-bottom: 1.25em;
+	}
+
+	&__content {
+		@extend .container_center;
+		position: relative;
+	}
 
 	&__row {
-		@extend .container_center;
-		padding-left: 1.5em;
+		position: relative;
+		z-index: 1;
 
 		display: flex;
 		justify-content: space-between;
@@ -14,6 +25,12 @@
 		background-color: $color_bg_info;
 		color: $color_primary;
 		border-radius: 6.25em;
+
+		padding: 0.882em 0.625em;
+
+		@media (min-width: 768px) {
+			padding: 0 0 0 1.5em;
+		}
 	}
 
 	&__col {
@@ -35,56 +52,104 @@
 	}
 
 	&__nav {
-		position: fixed;
-		top: -100vh;
-		left: 0;
-		width: 100vw;
-		height: 100vh;
+		position: absolute;
+
+		top: -110vh;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 18.75em;
+		height: auto;
+		padding: 2.75em 0;
+		border-radius: 1.25em;
 
 		z-index: 10;
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
 
 		background-color: $color_bg_info;
 		transition: 0.3s;
 
+		@media (min-width: 768px) {
+			position: fixed;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			transform: none;
+			padding: 0;
+			border-radius: 0;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
 		&.active {
-			top: 0;
+			top: 3.05em;
+			@media (min-width: 768px) {
+				top: 0;
+			}
 		}
 
 		.navbar {
-			&__close {
-				position: absolute;
-				top: 2.5em;
-				right: 2.5em;
+			&__row {
 
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				width: 2.5em;
-				height: 2.5em;
-				cursor: pointer;
-				color: $color_bg_primary;
-				transition: 0.3s;
+				@media (max-width: 767px) {
+					text-align: center;
 
-				&:after {
-					content: '\e914';
-					font-family: $icon_font_famaly;
-					font-size: 1.5em;
+					&:first-child {
+						padding-bottom: 2.75em;
+					}
+
+					&:nth-child(2),
+					&:nth-child(3) {
+						padding: 0.688em 1.25em;
+					}
+					border-bottom: 0.0625em solid #E8E3DD;
+
+					&:last-child {
+						padding-top: 2.75em;
+						border-bottom: 0;
+					}
+
 				}
 
-				&:hover {
-					color: $color_white;
+			}
+
+			@media (min-width: 768px) {
+				&__close {
+					position: absolute;
+					top: 2.5em;
+					right: 2.5em;
+
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 2.5em;
+					height: 2.5em;
+					cursor: pointer;
+					color: $color_bg_primary;
+					transition: 0.3s;
+
+					&:after {
+						content: '\e914';
+						font-family: $icon_font_famaly;
+						font-size: 1.5em;
+					}
+
+					&:hover {
+						color: $color_white;
+					}
 				}
 			}
 		}
 
 		.menu {
+			// border: 1px solid #fff;
 			margin: 0;
 			padding: 0;
 			list-style: none;
+			font-size: 0.417em;
+			@media (min-width: 768px) {
+				font-size: 1em;
+			}
 
 			&-item {
 				letter-spacing: -0.02em;
@@ -134,11 +199,16 @@
 
 	.toggle {
 		text-transform: uppercase;
-		font-size: 1.125em;
 		font-weight: 800;
 
 		cursor: pointer;
 		transition: 0.3s;
+
+		font-size: 0.875em;
+
+		@media (min-width: 768px) {
+			font-size: 1.125em;
+		}
 
 		&:before {
 			content: '\e915';
@@ -150,62 +220,19 @@
 		&:hover {
 			color: $color_white;
 		}
-	}
 
-	.language {
-		display: flex;
-
-		text-transform: uppercase;
-		font-size: 1.125em;
-		font-weight: 700;
-
-		&__label {}
-
-		&__list {
-			position: relative;
-
-			&:after {
-				content: '\e90a';
-				font-family: $icon_font_famaly;
-
-				position: absolute;
-
-				top: 50%;
-				transform: translateY(-50%)scale(1);
-				right: -3em;
-				font-size: 0.39em;
-			}
-		}
-
-		&__item {
-			// &:hover {
-			// 	color: $color_white;
-			// }
-		}
-	}
-
-	.search {
-		&__link {
-			text-transform: uppercase;
-			font-size: 1.125em;
-			font-weight: 700;
-			text-decoration: none;
-			color: $color_primary;
-
+		&.active {
 			&:before {
-				content: '\e90f';
-				font-family: $icon_font_famaly;
-				margin-right: 0.555556em;
-			}
+				content: '\e914';
 
-			&:hover {
-				color: $color_white;
 			}
 		}
 	}
 
 	.btn {
-		padding: 1.469em 2em;
+		@media (min-width: 768px) {
+			padding: 1.469em 2em;
+		}
 	}
 
 }

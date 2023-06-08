@@ -4,7 +4,6 @@ $(document).ready(function() {
     const circle = new Swiper('.swiper_circle_js', {
         slidesPerView: 5,
         speed: 200,
-        // loop: true,
         autoplay: {
           delay: 3000,
         },
@@ -113,7 +112,7 @@ $(document).ready(function() {
         spaceBetween: 20,
         speed: 800,
         loop: true,
-    
+
         // autoplay: {
         //     delay: 5000,
         // },

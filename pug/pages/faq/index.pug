@@ -1,0 +1,91 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+
+block content
+
+    // begin breadcrumbs
+    section#breadcrumbs.breadcrumbs.section
+        .container_center.container_center_sm
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Main 
+
+                span.aioseo-breadcrumb-separator &middot;
+
+                span.aioseo-breadcrumb faq
+
+
+    // end breadcrumbs
+
+    // begin faq
+    section#faq.faq.section.pt_0
+        .container_center.container_center_sm
+            h1.section__title
+                span Frequently asked Questions
+
+            .faq__grid
+                each item in ['In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', ]
+                    .faq__item
+                        .faq__img.img
+                            img(src="../../img/faq.jpg", alt="alt")
+                        .faq__content
+                            .faq__title Construction of 3 houses for our students 
+                            .faq__excerpt
+                                p=item 
+
+            // start pagination
+            .pagination
+                a.prev
+                span.current 1
+                a(href="#") 2
+                span.dots ...
+                a(href="#") 10
+                a.next
+
+            // end pagination
+
+    // end faq
+
+    // begin question
+    section#question.question.section
+        .container_center.container_center_sm
+            .question__content
+                .question__caption
+                    h2.section__title 
+                        span Didn't find answer to your question?
+
+                    .question__label Write to us and we will answer as soon as possible
+
+                .question__form
+                    form.form.form_sm(action="send.php")
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        input(type="hidden" name="notspam" value="")
+
+                        .form__row
+                            input(type="text" placeholder="Name")
+
+                        .form__row
+                            input(type="email" placeholder="E-mail")
+
+                        .form__row
+                            textarea(type="text" placeholder="Еnter your message")
+
+                        .form__row.form__row_group
+
+                            label.form__check
+                                input(type="checkbox" checked="checked")
+                                span I confirm my agreement with the rules for the provision of <a href="#" target="_blank">information services</a>
+
+                            button.btn.btn_reverse(type="submit")
+                                span Send
+
+
+
+                .question__img.img.br
+                    img(src="../../img/question.webp", alt="alt")
+
+
+    // end question

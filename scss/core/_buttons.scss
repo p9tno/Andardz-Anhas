@@ -2,7 +2,6 @@
 
 .btn {
 	display: inline-block;
-	padding: 1.219em 2.143em;
 
 	border: 0.125em solid;
 	border-radius: 6.25em;
@@ -25,7 +24,14 @@
 	cursor: pointer;
 	transition: 0.3s;
 
+	padding: 0.844em 1.115em;
+
+	@media (min-width: 768px) {
+		padding: 1.219em 2.143em;
+	}
+
 	span {
+
 		font-size: 1em;
 
 		&:after {
@@ -47,6 +53,15 @@
 		// color: red;
 		// cursor: not-allowed;
 		// pointer-events: none;
+	}
+
+	&_reverse {
+		background-color: $color_info;
+		color: #E8E3DD;
+
+		&:hover {
+			background-color: $btn_color;
+		}
 	}
 
 }

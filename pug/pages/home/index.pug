@@ -10,8 +10,7 @@ block content
     section#firstscreen.firstscreen.section
         .container_center
             .firstscreen__wrap.br
-                .firstscreen__img.img
-                    img(src="../../img/firstscreen.webp", alt="alt")
+
                 .firstscreen__content.br
                     .firstscreen__left
                         h1.section__title
@@ -35,14 +34,17 @@ block content
                                 .swiper_fraction.firstscreen_fraction_js
                                 i.icon_arrow_right
 
+                .firstscreen__img.img
+                    img.desktop(src="../../img/firstscreen.webp", alt="alt")
+                    img.mobile(src="../../img/firstscreen_m.webp", alt="alt")
+
     // end firstscreen
 
     // begin platform
     section#platform.platform.section
         .container_center
             .platform__wrap.br
-                .platform__img.img
-                    img(src="../../img/platform.webp", alt="alt")
+
 
                 .platform__content
                     h2.section__title.section__title_reverse
@@ -57,183 +59,187 @@ block content
                                 .hand__img
                                     img(src="../../img/hand.webp" alt="alt")
 
-                        b Help
+                            b Help
+
+                .platform__img.img
+                    img.desktop(src="../../img/platform.webp", alt="alt")
+                    img.mobile(src="../../img/platform_m.webp", alt="alt")
 
 
     // end platform
 
-    // begin fundraising
-    section#fundraising.fundraising.section
-        .container_center.container_center_sm
-            .fundraising__head
-                h2.section__title
-                    span Fundraising
-                .fundraising__action
-                    a(href="#") see all
-                    .swiper_arrow
-                        i.icon_arrow_left
-                        i.icon_arrow_right
+    //- // begin fundraising
+    //- section#fundraising.fundraising.section
+    //-     .container_center.container_center_sm
+    //-         .fundraising__head
+    //-             h2.section__title
+    //-                 span Fundraising
+    //-             .fundraising__action
+    //-                 a(href="#") see all
+    //-                 .swiper_arrow
+    //-                     i.icon_arrow_left
+    //-                     i.icon_arrow_right
+    //- 
+    //-         .fundraising__slider
+    //-             .swiper.swiper_fundraising_js
+    //-                 .swiper-wrapper
+    //-                     each item in [1,2,3,4,5]
+    //-                         .swiper-slide
+    //- 
+    //-                             //- start item
+    //-                             .fundraising__item.br
+    //-                                 .fundraising__img.img
+    //-                                     img(src="../../img/fundraising.jpg", alt="alt")
+    //-                                     .fundraising__cat 
+    //-                                         span Art and culture
+    //-                                 .fundraising__content
+    //-                                     .fundraising__caption
+    //-                                         .fundraising__title Construction of 3 houses for our students
+    //-                                         .fundraising__status Active
+    //-                                     .fundraising__excerpt
+    //-                                         p In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses to make our students' overnight stay more educational and interesting. <a href="#">Learn more</a>
+    //-                                     .fundraising__progress
+    //-                                         .progress
+    //-                                             .progress__info
+    //-                                                 .progress__sum
+    //-                                                     span $
+    //-                                                     span.sum  15,500.00
+    //- 
+    //-                                                 .progress__percent
+    //-                                                     span.percent 70
+    //-                                                     span  %
+    //- 
+    //-                                             .progress__line
+    //-                                                 .progress__line_bg(style="width: 70%;")
+    //- 
+    //-                                     .fundraising__day
+    //-                                         .fundraising__circle
+    //-                                             span 4
+    //-                                         span Days left
+    //- 
+    //-                             //- end item
+    //- 
+    //- 
+    //- // end fundraising
 
-            .fundraising__slider
-                .swiper.swiper_fundraising_js
-                    .swiper-wrapper
-                        each item in [1,2,3,4,5]
-                            .swiper-slide
+    //- // begin faq
+    //- section#faq.faq.section
+    //-     .container_center.container_center_sm
+    //-         .faq__head
+    //-             h2.section__title
+    //-                 span Frequently asked Questions
+    //-             a(href="#") Ask a Question
+    //-         .faq__grid
+    //-             each item in ['In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', ]
+    //-                 .faq__item
+    //-                     .faq__img.img
+    //-                         img(src="../../img/faq.jpg", alt="alt")
+    //-                     .faq__content
+    //-                         .faq__title Construction of 3 houses for our students 
+    //-                         .faq__excerpt
+    //-                             p=item 
+    //- 
+    //- 
+    //- // end faq
 
-                                //- start item
-                                .fundraising__item.br
-                                    .fundraising__img.img
-                                        img(src="../../img/fundraising.jpg", alt="alt")
-                                        .fundraising__cat 
-                                            span Art and culture
-                                    .fundraising__content
-                                        .fundraising__caption
-                                            .fundraising__title Construction of 3 houses for our students
-                                            .fundraising__status Active
-                                        .fundraising__excerpt
-                                            p In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses to make our students' overnight stay more educational and interesting. <a href="#">Learn more</a>
-                                        .fundraising__progress
-                                            .progress
-                                                .progress__info
-                                                    .progress__sum
-                                                        span $
-                                                        span.sum  15,500.00
+    //- // begin library
+    //- section#library.library.section
+    //-     .container_center
+    //-         .library__wrap.br
+    //-             .library__head
+    //-                 h2.section__title.section__title_reverse
+    //-                     span Library
+    //- 
+    //-                 .swiper_arrow.swiper_arrow_circle
+    //-                     i.icon_arrow_left
+    //-                     i.icon_arrow_right
+    //- 
+    //-             .library__slider
+    //-                 .swiper.swiper_library_js
+    //-                     .swiper-wrapper
+    //-                         //- start library slide
+    //-                         .swiper-slide
+    //-                             .library__item.library__item_video.br
+    //-                                 .library__top
+    //-                                     .library__cat 
+    //-                                         span fairy tales
+    //-                                 .library__main
+    //-                                     a.library__title(href="#") Moral Principles in the Epic J.A Ghazaryan
+    //-                                     .library__excerpt
+    //-                                         p "Moral Principles in the Epic" by J.A. Ghazaryan is a book that explores the moral values and ethical principles depicted in Armenian national epic poetry. It delves into the themes of courage, loyalty, justice, and love, as well as the portrayal of heroes and their deeds in the context of Armenian culture and history.
+    //-                                 .library__bottom
+    //-                                     .video
+    //-                                         .video__play
+    //-                                         .video__label listen
+    //-                                     .info
+    //-                                         .info__img.img
+    //-                                             img(src="../../img/info_1.jpg", alt="alt")
+    //-                                         .info__label
+    //-                                             span Fairy tale author
+    //-                                             span Reading: Storyteller
+    //- 
+    //-                         //- end library slide
+    //- 
+    //-                         each item in ['', '', '', '', ]
+    //- 
+    //- 
+    //-                             //- start library slide
+    //-                             .swiper-slide
+    //-                                 .library__item.br
+    //-                                     .library__top
+    //-                                         .library__cat 
+    //-                                             span publication
+    //-                                     .library__main
+    //-                                         a.library__title(href="#") Sasuntsi David
+    //-                                         .library__excerpt
+    //-                                             p The Armenian epic "Sasuntsi David" tells the story of the legendary hero David of Sasun and his battles against foreign invaders. The story contains themes of heroism, love, loyalty, and patriotism, and it portrays the struggle of the Armenian people against oppression and injustice.
+    //-                                     .library__bottom
+    //-                                         .info
+    //-                                             .info__img.img
+    //-                                                 img(src="../../img/info_2.jpg", alt="alt")
+    //-                                             .info__label
+    //-                                                 span J.A. Ghazaryan
+    //-                                                 span 20.04.2023
+    //- 
+    //-                             //- end library slide
+    //- 
+    //- 
+    //- 
+    //- 
+    //- 
+    //- 
+    //- // end library
 
-                                                    .progress__percent
-                                                        span.percent 70
-                                                        span  %
-
-                                                .progress__line
-                                                    .progress__line_bg(style="width: 70%;")
-
-                                        .fundraising__day
-                                            .fundraising__circle
-                                                span 4
-                                            span Days left
-
-                                //- end item
-
-
-    // end fundraising
-
-    // begin faq
-    section#faq.faq.section
-        .container_center.container_center_sm
-            .faq__head
-                h2.section__title
-                    span Frequently asked Questions
-                a(href="#") Ask a Question
-            .faq__grid
-                each item in ['In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', ]
-                    .faq__item
-                        .faq__img.img
-                            img(src="../../img/faq.jpg", alt="alt")
-                        .faq__content
-                            .faq__title Construction of 3 houses for our students 
-                            .faq__excerpt
-                                p=item 
-
-
-    // end faq
-
-    // begin library
-    section#library.library.section
-        .container_center
-            .library__wrap.br
-                .library__head
-                    h2.section__title.section__title_reverse
-                        span Library
-
-                    .swiper_arrow.swiper_arrow_circle
-                        i.icon_arrow_left
-                        i.icon_arrow_right
-
-                .library__slider
-                    .swiper.swiper_library_js
-                        .swiper-wrapper
-                            //- start library slide
-                            .swiper-slide
-                                .library__item.library__item_video.br
-                                    .library__top
-                                        .library__cat 
-                                            span fairy tales
-                                    .library__main
-                                        a.library__title(href="#") Moral Principles in the Epic J.A Ghazaryan
-                                        .library__excerpt
-                                            p "Moral Principles in the Epic" by J.A. Ghazaryan is a book that explores the moral values and ethical principles depicted in Armenian national epic poetry. It delves into the themes of courage, loyalty, justice, and love, as well as the portrayal of heroes and their deeds in the context of Armenian culture and history.
-                                    .library__bottom
-                                        .video
-                                            .video__play
-                                            .video__label listen
-                                        .info
-                                            .info__img.img
-                                                img(src="../../img/info_1.jpg", alt="alt")
-                                            .info__label
-                                                span Fairy tale author
-                                                span Reading: Storyteller
-
-                            //- end library slide
-
-                            each item in ['', '', '', '', ]
-
-
-                                //- start library slide
-                                .swiper-slide
-                                    .library__item.br
-                                        .library__top
-                                            .library__cat 
-                                                span publication
-                                        .library__main
-                                            a.library__title(href="#") Sasuntsi David
-                                            .library__excerpt
-                                                p The Armenian epic "Sasuntsi David" tells the story of the legendary hero David of Sasun and his battles against foreign invaders. The story contains themes of heroism, love, loyalty, and patriotism, and it portrays the struggle of the Armenian people against oppression and injustice.
-                                        .library__bottom
-                                            .info
-                                                .info__img.img
-                                                    img(src="../../img/info_2.jpg", alt="alt")
-                                                .info__label
-                                                    span J.A. Ghazaryan
-                                                    span 20.04.2023
-
-                                //- end library slide
-
-
-
-
-
-
-    // end library
-
-    // begin news
-    section#news.news.section
-        .container_center
-            .news__wrap
-                .news__head
-                    h2.section__title 
-                        span News
-
-                    .swiper_nav.swiper_nav_circle
-                        i.icon_arrow_left
-                        .swiper_fraction.news_fraction_js
-                        i.icon_arrow_right
-
-                .news__slider
-                    .swiper.swiper_news_js
-                        .swiper-wrapper
-                            each item in [1,2,3,4]
-                                .swiper-slide
-                                    .news__item.br
-                                        .news__content
-                                            .news__title Сonstruction of the Marble Fountain and Pool
-                                            .news__excerpt
-                                                p In "Ayg" Armenological and Esoteric School-Center, we have started the construction of the Marble Fountain and Pool for the esoteric experience of our students. <a href="#">Learn more</a>
-
-                                            .news__info
-                                                span Art and culture
-                                                span 20.04.2023
-                                        .news__img.img.br
-                                            img(src="../../img/news.jpg", alt="alt")
-
-
-
-    // end news
+    //- // begin news
+    //- section#news.news.section
+    //-     .container_center
+    //-         .news__wrap
+    //-             .news__head
+    //-                 h2.section__title 
+    //-                     span News
+    //- 
+    //-                 .swiper_nav.swiper_nav_circle
+    //-                     i.icon_arrow_left
+    //-                     .swiper_fraction.news_fraction_js
+    //-                     i.icon_arrow_right
+    //- 
+    //-             .news__slider
+    //-                 .swiper.swiper_news_js
+    //-                     .swiper-wrapper
+    //-                         each item in [1,2,3,4]
+    //-                             .swiper-slide
+    //-                                 .news__item.br
+    //-                                     .news__content
+    //-                                         .news__title Сonstruction of the Marble Fountain and Pool
+    //-                                         .news__excerpt
+    //-                                             p In "Ayg" Armenological and Esoteric School-Center, we have started the construction of the Marble Fountain and Pool for the esoteric experience of our students. <a href="#">Learn more</a>
+    //- 
+    //-                                         .news__info
+    //-                                             span Art and culture
+    //-                                             span 20.04.2023
+    //-                                     .news__img.img.br
+    //-                                         img(src="../../img/news.jpg", alt="alt")
+    //- 
+    //- 
+    //- 
+    //- // end news

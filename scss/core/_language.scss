@@ -1,0 +1,129 @@
+.language {
+    position: relative;
+    text-transform: uppercase;
+    color: $color_white;
+
+    font-weight: 700;
+    text-align: left;
+    font-size: 0.875em;
+
+    @media (min-width: 768px) {
+        display: flex;
+        font-size: 1.125em;
+        color: $color_primary;
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+
+            height: 3.7em;
+            width: 33em;
+            background-color: $color_bg_info;
+            z-index: 1;
+        }
+    }
+
+    &__toggle {
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+
+        &:after {
+            display: inline-block;
+            content: '\e90a';
+            font-family: $icon_font_famaly;
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%)scale(1);
+            transition: 0.3s;
+
+            right: 0;
+            font-size: 0.5em;
+
+            @media (min-width: 768px) {
+                right: -3em;
+                font-size: 0.39em;
+            }
+        }
+
+        &.active {
+            &:after {
+
+                transform: translateY(-50%)scale(-1);
+            }
+        }
+    }
+
+    &__list {
+        display: flex;
+        transition: 0.3s;
+
+        @media (max-width: 767px) {
+            justify-content: space-between;
+            align-items: center;
+
+            opacity: 0;
+            visibility: hidden;
+            height: 0;
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+                height: 3em;
+            }
+        }
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 0 3.21em;
+            background: #F8F4ED;
+            border: 0.125em solid #5A3560;
+            border-top: 0;
+            border-bottom-left-radius: 2.5em;
+            border-bottom-right-radius: 2.5em;
+
+            &.active {
+                top: 2.5em;
+                padding: 0.667em 3.21em 1.625em;
+            }
+        }
+
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        width: fit-content;
+
+        color: #ECE7DE;
+
+        @media (min-width: 768px) {
+            color: $color_bg_info;
+            margin-right: 5.5em;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .language__flag {
+            width: 2.1875em;
+            height: 1.375em;
+            margin-right: 0.875em;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

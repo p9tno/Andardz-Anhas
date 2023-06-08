@@ -11,37 +11,66 @@
   <body>
     <div class="wrapper" id="wrapper">
       <header class="header">
-        <div class="header__row">
-          <div class="header__col">
-            <div class="logo"><a class="logo__link" href="/">Andardz-Anhas</a></div>
-          </div>
-          <div class="header__col">
-            <div class="toggle">Menu</div>
-            <div class="language">
-              <div class="language__label">Language:&nbsp; </div>
-              <div class="language__list">
-                <div class="language__item">Eng</div>
+        <div class="header__content">
+          <div class="header__row">
+            <div class="header__col">
+              <div class="logo"><a class="logo__link" href="/">Andardz-Anhas</a></div>
+            </div>
+            <div class="header__col">
+              <div class="toggle">Menu</div>
+              <div class="language desktop">
+                <div class="language__toggle">Language:&nbsp;<span>Eng</span></div>
+                <div class="language__list"><a class="language__item" href="#">
+                    <div class="language__flag"><img src="../../img/1.svg" alt="alt"/></div><span>Eng</span></a><a class="language__item" href="#">
+                    <div class="language__flag"><img src="../../img/2.svg" alt="alt"/></div><span>rus</span></a><a class="language__item" href="#">
+                    <div class="language__flag"><img src="../../img/3.svg" alt="alt"/></div><span>ՀԱՅ</span></a></div>
               </div>
             </div>
-          </div>
-          <div class="header__col">
-            <div class="search"><a class="search__link" href="#">Search</a></div>
-            <div class="registration"><a class="btn" href="#"><span>registration</span></a></div>
+            <div class="header__col desktop">
+              <div class="search"><a class="search__link" href="#">Search</a></div>
+              <div class="registration"><a class="btn" href="#"><span>registration</span></a></div>
+            </div>
           </div>
           <div class="header__nav">
-            <div class="navbar__close"></div>
-            <nav class="navbar" id="navbar">
-              <ul class="menu">
-                <li class="menu-item current-menu-item"><a href="#">Fundraising</a></li>
-                <li class="menu-item"><a href="#">What we do</a></li>
-                <li class="menu-item"><a href="#">Publications</a></li>
-                <li class="menu-item"><a href="#">Library</a></li>
-                <li class="menu-item"><a href="#">News</a></li>
-                <li class="menu-item"><a href="#">Write to us</a></li>
-                <li class="menu-item"><a href="#">Faq</a></li>
-                <li class="menu-item"><a href="#">Contact</a></li>
-              </ul>
-            </nav>
+            <div class="navbar__row">
+              <div class="navbar__close desktop"></div>
+              <nav class="navbar" id="navbar">
+                <ul class="menu">
+                  <li class="menu-item current-menu-item"><a href="#">Fundraising</a></li>
+                  <li class="menu-item"><a href="#">What we do</a></li>
+                  <li class="menu-item"><a href="#">Publications</a></li>
+                  <li class="menu-item"><a href="#">Library</a></li>
+                  <li class="menu-item"><a href="#">News</a></li>
+                  <li class="menu-item"><a href="#">Write to us</a></li>
+                  <li class="menu-item"><a href="#">Faq</a></li>
+                  <li class="menu-item"><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="navbar__row mobile">              
+              <div class="language">
+                <div class="language__toggle">Language:&nbsp;<span>Eng</span></div>
+                <div class="language__list"><a class="language__item" href="#">
+                    <div class="language__flag"><img src="../../img/1.svg" alt="alt"/></div><span>Eng</span></a><a class="language__item" href="#">
+                    <div class="language__flag"><img src="../../img/2.svg" alt="alt"/></div><span>rus</span></a><a class="language__item" href="#">
+                    <div class="language__flag"><img src="../../img/3.svg" alt="alt"/></div><span>ՀԱՅ</span></a></div>
+              </div>
+            </div>
+            <div class="navbar__row mobile">
+              <div class="search">
+                <form class="search__form">
+                  <input class="search__input" type="text" placeholder="Search" value="" name="s" autocomplete="off"/>
+                  <button class="search__btn"><i class="icon_loup"></i></button>
+                </form>
+              </div>
+            </div>
+            <div class="navbar__row mobile"><a class="btn" href="#"><span>registration</span></a></div>
+          </div>
+          <div class="search__wrap desktop">
+            <form class="search__form">
+              <input class="search__input" type="text" placeholder="Search" value="" name="s" autocomplete="off"/>
+              <button class="search__btn"><i class="icon_loup"></i></button>
+            </form>
           </div>
         </div>
       </header>
@@ -50,7 +79,6 @@
         <section class="firstscreen section" id="firstscreen">
           <div class="container_center">
             <div class="firstscreen__wrap br">
-              <div class="firstscreen__img img"><img src="../../img/firstscreen.webp" alt="alt"/></div>
               <div class="firstscreen__content br">
                 <div class="firstscreen__left">
                   <h1 class="section__title"><span>Computing Infrastructure for Genomic Bioinformatics for Armenia</span></h1>
@@ -124,6 +152,7 @@
                   </div>
                 </div>
               </div>
+              <div class="firstscreen__img img"><img class="desktop" src="../../img/firstscreen.webp" alt="alt"/><img class="mobile" src="../../img/firstscreen_m.webp" alt="alt"/></div>
             </div>
           </div>
         </section>
@@ -132,7 +161,6 @@
         <section class="platform section" id="platform">
           <div class="container_center">
             <div class="platform__wrap br">
-              <div class="platform__img img"><img src="../../img/platform.webp" alt="alt"/></div>
               <div class="platform__content">
                 <h2 class="section__title section__title_reverse"><span>Andardz-Anhaz is a cooperation<br> platform for Armenians from<br> all over the world</span></h2>
                 <p>Which hosts projects aimed at solving various pressing problems, and receives the necessary resources in the form of knowledge, experience, connections or finances.</p>
@@ -140,434 +168,22 @@
                   <div class="hand">
                     <div class="hand__wrap">
                       <div class="hand__img"><img src="../../img/hand.webp" alt="alt"/></div>
-                    </div>
-                  </div><b>Help</b>
+                    </div><b>Help</b>
+                  </div>
                 </div>
               </div>
+              <div class="platform__img img"><img class="desktop" src="../../img/platform.webp" alt="alt"/><img class="mobile" src="../../img/platform_m.webp" alt="alt"/></div>
             </div>
           </div>
         </section>
         <!-- end platform-->
-        <!-- begin fundraising-->
-        <section class="fundraising section" id="fundraising">
-          <div class="container_center container_center_sm">
-            <div class="fundraising__head">
-              <h2 class="section__title"><span>Fundraising</span></h2>
-              <div class="fundraising__action"><a href="#">see all</a>
-                <div class="swiper_arrow"><i class="icon_arrow_left"></i><i class="icon_arrow_right"></i></div>
-              </div>
-            </div>
-            <div class="fundraising__slider">
-              <div class="swiper swiper_fundraising_js">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="fundraising__item br">
-                      <div class="fundraising__img img"><img src="../../img/fundraising.jpg" alt="alt"/>
-                        <div class="fundraising__cat"> <span>Art and culture</span></div>
-                      </div>
-                      <div class="fundraising__content">
-                        <div class="fundraising__caption">
-                          <div class="fundraising__title">Construction of 3 houses for our students</div>
-                          <div class="fundraising__status">Active</div>
-                        </div>
-                        <div class="fundraising__excerpt">
-                          <p>In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses to make our students' overnight stay more educational and interesting. <a href="#">Learn more</a></p>
-                        </div>
-                        <div class="fundraising__progress">
-                          <div class="progress">
-                            <div class="progress__info">
-                              <div class="progress__sum"><span>$</span><span class="sum"> 15,500.00</span></div>
-                              <div class="progress__percent"><span class="percent">70</span><span> %</span></div>
-                            </div>
-                            <div class="progress__line">
-                              <div class="progress__line_bg" style="width: 70%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="fundraising__day">
-                          <div class="fundraising__circle"><span>4</span></div><span>Days left</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="fundraising__item br">
-                      <div class="fundraising__img img"><img src="../../img/fundraising.jpg" alt="alt"/>
-                        <div class="fundraising__cat"> <span>Art and culture</span></div>
-                      </div>
-                      <div class="fundraising__content">
-                        <div class="fundraising__caption">
-                          <div class="fundraising__title">Construction of 3 houses for our students</div>
-                          <div class="fundraising__status">Active</div>
-                        </div>
-                        <div class="fundraising__excerpt">
-                          <p>In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses to make our students' overnight stay more educational and interesting. <a href="#">Learn more</a></p>
-                        </div>
-                        <div class="fundraising__progress">
-                          <div class="progress">
-                            <div class="progress__info">
-                              <div class="progress__sum"><span>$</span><span class="sum"> 15,500.00</span></div>
-                              <div class="progress__percent"><span class="percent">70</span><span> %</span></div>
-                            </div>
-                            <div class="progress__line">
-                              <div class="progress__line_bg" style="width: 70%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="fundraising__day">
-                          <div class="fundraising__circle"><span>4</span></div><span>Days left</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="fundraising__item br">
-                      <div class="fundraising__img img"><img src="../../img/fundraising.jpg" alt="alt"/>
-                        <div class="fundraising__cat"> <span>Art and culture</span></div>
-                      </div>
-                      <div class="fundraising__content">
-                        <div class="fundraising__caption">
-                          <div class="fundraising__title">Construction of 3 houses for our students</div>
-                          <div class="fundraising__status">Active</div>
-                        </div>
-                        <div class="fundraising__excerpt">
-                          <p>In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses to make our students' overnight stay more educational and interesting. <a href="#">Learn more</a></p>
-                        </div>
-                        <div class="fundraising__progress">
-                          <div class="progress">
-                            <div class="progress__info">
-                              <div class="progress__sum"><span>$</span><span class="sum"> 15,500.00</span></div>
-                              <div class="progress__percent"><span class="percent">70</span><span> %</span></div>
-                            </div>
-                            <div class="progress__line">
-                              <div class="progress__line_bg" style="width: 70%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="fundraising__day">
-                          <div class="fundraising__circle"><span>4</span></div><span>Days left</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="fundraising__item br">
-                      <div class="fundraising__img img"><img src="../../img/fundraising.jpg" alt="alt"/>
-                        <div class="fundraising__cat"> <span>Art and culture</span></div>
-                      </div>
-                      <div class="fundraising__content">
-                        <div class="fundraising__caption">
-                          <div class="fundraising__title">Construction of 3 houses for our students</div>
-                          <div class="fundraising__status">Active</div>
-                        </div>
-                        <div class="fundraising__excerpt">
-                          <p>In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses to make our students' overnight stay more educational and interesting. <a href="#">Learn more</a></p>
-                        </div>
-                        <div class="fundraising__progress">
-                          <div class="progress">
-                            <div class="progress__info">
-                              <div class="progress__sum"><span>$</span><span class="sum"> 15,500.00</span></div>
-                              <div class="progress__percent"><span class="percent">70</span><span> %</span></div>
-                            </div>
-                            <div class="progress__line">
-                              <div class="progress__line_bg" style="width: 70%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="fundraising__day">
-                          <div class="fundraising__circle"><span>4</span></div><span>Days left</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="fundraising__item br">
-                      <div class="fundraising__img img"><img src="../../img/fundraising.jpg" alt="alt"/>
-                        <div class="fundraising__cat"> <span>Art and culture</span></div>
-                      </div>
-                      <div class="fundraising__content">
-                        <div class="fundraising__caption">
-                          <div class="fundraising__title">Construction of 3 houses for our students</div>
-                          <div class="fundraising__status">Active</div>
-                        </div>
-                        <div class="fundraising__excerpt">
-                          <p>In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses to make our students' overnight stay more educational and interesting. <a href="#">Learn more</a></p>
-                        </div>
-                        <div class="fundraising__progress">
-                          <div class="progress">
-                            <div class="progress__info">
-                              <div class="progress__sum"><span>$</span><span class="sum"> 15,500.00</span></div>
-                              <div class="progress__percent"><span class="percent">70</span><span> %</span></div>
-                            </div>
-                            <div class="progress__line">
-                              <div class="progress__line_bg" style="width: 70%;"></div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="fundraising__day">
-                          <div class="fundraising__circle"><span>4</span></div><span>Days left</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- end fundraising-->
-        <!-- begin faq-->
-        <section class="faq section" id="faq">
-          <div class="container_center container_center_sm">
-            <div class="faq__head">
-              <h2 class="section__title"><span>Frequently asked Questions</span></h2><a href="#">Ask a Question</a>
-            </div>
-            <div class="faq__grid">
-              <div class="faq__item">
-                <div class="faq__img img"><img src="../../img/faq.jpg" alt="alt"/></div>
-                <div class="faq__content">
-                  <div class="faq__title">Construction of 3 houses for our students </div>
-                  <div class="faq__excerpt">
-                    <p>In &quot;Ayg&quot; Armenological and Esoteric School-Center, we have started the construction of tree houses </p>
-                  </div>
-                </div>
-              </div>
-              <div class="faq__item">
-                <div class="faq__img img"><img src="../../img/faq.jpg" alt="alt"/></div>
-                <div class="faq__content">
-                  <div class="faq__title">Construction of 3 houses for our students </div>
-                  <div class="faq__excerpt">
-                    <p>In &quot;Ayg&quot; Armenological and Esoteric School-Center, we have started the construction of tree houses </p>
-                  </div>
-                </div>
-              </div>
-              <div class="faq__item">
-                <div class="faq__img img"><img src="../../img/faq.jpg" alt="alt"/></div>
-                <div class="faq__content">
-                  <div class="faq__title">Construction of 3 houses for our students </div>
-                  <div class="faq__excerpt">
-                    <p>In &quot;Ayg&quot; Armenological and Esoteric School-Center, we have started the construction of tree houses In &quot;Ayg&quot; Armenological and Esoteric School-Center, we have started the construction of tree houses </p>
-                  </div>
-                </div>
-              </div>
-              <div class="faq__item">
-                <div class="faq__img img"><img src="../../img/faq.jpg" alt="alt"/></div>
-                <div class="faq__content">
-                  <div class="faq__title">Construction of 3 houses for our students </div>
-                  <div class="faq__excerpt">
-                    <p>In &quot;Ayg&quot; Armenological and Esoteric School-Center, we have started the construction of tree houses </p>
-                  </div>
-                </div>
-              </div>
-              <div class="faq__item">
-                <div class="faq__img img"><img src="../../img/faq.jpg" alt="alt"/></div>
-                <div class="faq__content">
-                  <div class="faq__title">Construction of 3 houses for our students </div>
-                  <div class="faq__excerpt">
-                    <p>In &quot;Ayg&quot; Armenological and Esoteric School-Center, we have started the construction of tree houses </p>
-                  </div>
-                </div>
-              </div>
-              <div class="faq__item">
-                <div class="faq__img img"><img src="../../img/faq.jpg" alt="alt"/></div>
-                <div class="faq__content">
-                  <div class="faq__title">Construction of 3 houses for our students </div>
-                  <div class="faq__excerpt">
-                    <p>In &quot;Ayg&quot; Armenological and Esoteric School-Center, we have started the construction of tree houses </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- end faq-->
-        <!-- begin library-->
-        <section class="library section" id="library">
-          <div class="container_center">
-            <div class="library__wrap br">
-              <div class="library__head">
-                <h2 class="section__title section__title_reverse"><span>Library</span></h2>
-                <div class="swiper_arrow swiper_arrow_circle"><i class="icon_arrow_left"></i><i class="icon_arrow_right"></i></div>
-              </div>
-              <div class="library__slider">
-                <div class="swiper swiper_library_js">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="library__item library__item_video br">
-                        <div class="library__top">
-                          <div class="library__cat"> <span>fairy tales</span></div>
-                        </div>
-                        <div class="library__main"><a class="library__title" href="#">Moral Principles in the Epic J.A Ghazaryan</a>
-                          <div class="library__excerpt">
-                            <p>"Moral Principles in the Epic" by J.A. Ghazaryan is a book that explores the moral values and ethical principles depicted in Armenian national epic poetry. It delves into the themes of courage, loyalty, justice, and love, as well as the portrayal of heroes and their deeds in the context of Armenian culture and history.</p>
-                          </div>
-                        </div>
-                        <div class="library__bottom">
-                          <div class="video">
-                            <div class="video__play"></div>
-                            <div class="video__label">listen</div>
-                          </div>
-                          <div class="info">
-                            <div class="info__img img"><img src="../../img/info_1.jpg" alt="alt"/></div>
-                            <div class="info__label"><span>Fairy tale author</span><span>Reading: Storyteller</span></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="library__item br">
-                        <div class="library__top">
-                          <div class="library__cat"> <span>publication</span></div>
-                        </div>
-                        <div class="library__main"><a class="library__title" href="#">Sasuntsi David</a>
-                          <div class="library__excerpt">
-                            <p>The Armenian epic "Sasuntsi David" tells the story of the legendary hero David of Sasun and his battles against foreign invaders. The story contains themes of heroism, love, loyalty, and patriotism, and it portrays the struggle of the Armenian people against oppression and injustice.</p>
-                          </div>
-                        </div>
-                        <div class="library__bottom">
-                          <div class="info">
-                            <div class="info__img img"><img src="../../img/info_2.jpg" alt="alt"/></div>
-                            <div class="info__label"><span>J.A. Ghazaryan</span><span>20.04.2023</span></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="library__item br">
-                        <div class="library__top">
-                          <div class="library__cat"> <span>publication</span></div>
-                        </div>
-                        <div class="library__main"><a class="library__title" href="#">Sasuntsi David</a>
-                          <div class="library__excerpt">
-                            <p>The Armenian epic "Sasuntsi David" tells the story of the legendary hero David of Sasun and his battles against foreign invaders. The story contains themes of heroism, love, loyalty, and patriotism, and it portrays the struggle of the Armenian people against oppression and injustice.</p>
-                          </div>
-                        </div>
-                        <div class="library__bottom">
-                          <div class="info">
-                            <div class="info__img img"><img src="../../img/info_2.jpg" alt="alt"/></div>
-                            <div class="info__label"><span>J.A. Ghazaryan</span><span>20.04.2023</span></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="library__item br">
-                        <div class="library__top">
-                          <div class="library__cat"> <span>publication</span></div>
-                        </div>
-                        <div class="library__main"><a class="library__title" href="#">Sasuntsi David</a>
-                          <div class="library__excerpt">
-                            <p>The Armenian epic "Sasuntsi David" tells the story of the legendary hero David of Sasun and his battles against foreign invaders. The story contains themes of heroism, love, loyalty, and patriotism, and it portrays the struggle of the Armenian people against oppression and injustice.</p>
-                          </div>
-                        </div>
-                        <div class="library__bottom">
-                          <div class="info">
-                            <div class="info__img img"><img src="../../img/info_2.jpg" alt="alt"/></div>
-                            <div class="info__label"><span>J.A. Ghazaryan</span><span>20.04.2023</span></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="library__item br">
-                        <div class="library__top">
-                          <div class="library__cat"> <span>publication</span></div>
-                        </div>
-                        <div class="library__main"><a class="library__title" href="#">Sasuntsi David</a>
-                          <div class="library__excerpt">
-                            <p>The Armenian epic "Sasuntsi David" tells the story of the legendary hero David of Sasun and his battles against foreign invaders. The story contains themes of heroism, love, loyalty, and patriotism, and it portrays the struggle of the Armenian people against oppression and injustice.</p>
-                          </div>
-                        </div>
-                        <div class="library__bottom">
-                          <div class="info">
-                            <div class="info__img img"><img src="../../img/info_2.jpg" alt="alt"/></div>
-                            <div class="info__label"><span>J.A. Ghazaryan</span><span>20.04.2023</span></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- end library-->
-        <!-- begin news-->
-        <section class="news section" id="news">
-          <div class="container_center">
-            <div class="news__wrap">
-              <div class="news__head">
-                <h2 class="section__title"> <span>News</span></h2>
-                <div class="swiper_nav swiper_nav_circle"><i class="icon_arrow_left"></i>
-                  <div class="swiper_fraction news_fraction_js"></div><i class="icon_arrow_right"></i>
-                </div>
-              </div>
-              <div class="news__slider">
-                <div class="swiper swiper_news_js">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="news__item br">
-                        <div class="news__content">
-                          <div class="news__title">Сonstruction of the Marble Fountain and Pool</div>
-                          <div class="news__excerpt">
-                            <p>In "Ayg" Armenological and Esoteric School-Center, we have started the construction of the Marble Fountain and Pool for the esoteric experience of our students. <a href="#">Learn more</a></p>
-                          </div>
-                          <div class="news__info"><span>Art and culture</span><span>20.04.2023</span></div>
-                        </div>
-                        <div class="news__img img br"><img src="../../img/news.jpg" alt="alt"/></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="news__item br">
-                        <div class="news__content">
-                          <div class="news__title">Сonstruction of the Marble Fountain and Pool</div>
-                          <div class="news__excerpt">
-                            <p>In "Ayg" Armenological and Esoteric School-Center, we have started the construction of the Marble Fountain and Pool for the esoteric experience of our students. <a href="#">Learn more</a></p>
-                          </div>
-                          <div class="news__info"><span>Art and culture</span><span>20.04.2023</span></div>
-                        </div>
-                        <div class="news__img img br"><img src="../../img/news.jpg" alt="alt"/></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="news__item br">
-                        <div class="news__content">
-                          <div class="news__title">Сonstruction of the Marble Fountain and Pool</div>
-                          <div class="news__excerpt">
-                            <p>In "Ayg" Armenological and Esoteric School-Center, we have started the construction of the Marble Fountain and Pool for the esoteric experience of our students. <a href="#">Learn more</a></p>
-                          </div>
-                          <div class="news__info"><span>Art and culture</span><span>20.04.2023</span></div>
-                        </div>
-                        <div class="news__img img br"><img src="../../img/news.jpg" alt="alt"/></div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="news__item br">
-                        <div class="news__content">
-                          <div class="news__title">Сonstruction of the Marble Fountain and Pool</div>
-                          <div class="news__excerpt">
-                            <p>In "Ayg" Armenological and Esoteric School-Center, we have started the construction of the Marble Fountain and Pool for the esoteric experience of our students. <a href="#">Learn more</a></p>
-                          </div>
-                          <div class="news__info"><span>Art and culture</span><span>20.04.2023</span></div>
-                        </div>
-                        <div class="news__img img br"><img src="../../img/news.jpg" alt="alt"/></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- end news-->
       </main>
       <footer class="footer">
         <div class="footer__content">
           <div class="footer__row">
             <div class="footer__col">
               <div class="logo"><a class="logo__link" href="/">Andardz-Anhas</a></div>
-              <div class="messenger">
+              <div class="messenger desktop">
                 <div class="messenger__list">
                   <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_instagram"></i></a></div>
                   <div class="messenger__item"><a class="messenger__link" href="#" target="_blank"><i class="icon_facebook"></i></a></div>
@@ -607,9 +223,11 @@
                 <div class="form__privacy">By clicking on the button you consent to the processing of personal data in accordance with the privacy policy</div>
               </div>
             </div>
-            <div class="footer__col"><a class="toTop" href="#wrapper"> </a></div>
           </div>
-          <div class="footer__row snakeline"><span>All rights reserved © <script type="text/javascript">document.write(new Date().getFullYear());</script></span><a href="#">Conditions and wishes</a><a href="#">Privacy Policy</a><a href="#">By Deesse Media</a></div>
+          <div class="footer__row footer__row_last snakeline">
+            <div class="footer__col"><span>All rights reserved © <script type="text/javascript">document.write(new Date().getFullYear());</script></span><a href="#">Conditions and wishes</a><a href="#">Privacy Policy</a><a href="#">By Deesse Media</a></div>
+          </div><a class="toTop" href="#wrapper">
+            <div class="toTop__arrow"></div><span>Back To Top</span></a>
         </div>
       </footer>
       <!-- Begin Modal modalVideo-->

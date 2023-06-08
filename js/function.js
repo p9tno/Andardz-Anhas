@@ -84,16 +84,62 @@ $(document).ready(function() {
 
     function openMobileNav() {
         $('.toggle').click(function(event) {
-            $( 'body' ).addClass('nav-open');
-            $( '.header__nav' ).addClass('active');
+            // $( 'body' ).toggleClass('nav-open');
+            $( '.header__nav' ).toggleClass('active');
+            $(this).toggleClass('active');
+
+            // $( 'body' ).addClass('nav-open');
+            // $( '.header__nav' ).addClass('active');
         });
 
         $('.navbar__close').click(function(event) {
-            $( 'body' ).removeClass('nav-open');
+            // $( 'body' ).removeClass('nav-open');
             $( '.header__nav' ).removeClass('active');
+            $( '.toggle' ).removeClass('active');
         });
     };
     openMobileNav();
+
+    function showSearch() {
+        $('.search__link').click(function(event) {
+            event.preventDefault();
+            $(this).toggleClass('active');
+            $('.search__wrap').toggleClass('active');
+        });
+
+        $(document).mouseup(function (e) {
+           let div = $(".header");
+           // если клик был не по нашему блоку и не по его дочерним элементам
+           if (!div.is(e.target) && div.has(e.target).length === 0) {
+               $('.search__wrap').removeClass('active');
+               $('.search__link').removeClass('active');
+           }
+       });
+
+    }
+    showSearch()
+
+    function showLanguage() {
+        $('.language__toggle').click(function(event) {
+            // event.preventDefault();
+            $(this).toggleClass('active');
+            $('.language__list').toggleClass('active');
+
+            $('.search__wrap').removeClass('active');
+            $('.search__link').removeClass('active');
+        });
+
+        $(document).mouseup(function (e) {
+           let div = $(".language");
+           // если клик был не по нашему блоку и не по его дочерним элементам
+           if (!div.is(e.target) && div.has(e.target).length === 0) {
+               $('.language__toggle').removeClass('active');
+               $('.language__list').removeClass('active');
+           }
+       });
+
+    }
+    showLanguage()
 
     // function collapsed() {
     //     let toggle = $('[data-collapse]');

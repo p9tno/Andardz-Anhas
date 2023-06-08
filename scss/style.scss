@@ -8,6 +8,8 @@
 // @import 'core/preloader';
 @import 'core/logo';
 @import 'core/messenger';
+@import 'core/search';
+@import 'core/language';
 
 @import 'core/header';
 @import 'core/footer';
@@ -18,6 +20,8 @@
 @import 'sections/faq';
 @import 'sections/library';
 @import 'sections/news';
+
+@import 'sections/question';
 
 @import 'core/form';
 @import 'core/breadcrumb';

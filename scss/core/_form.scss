@@ -1,29 +1,15 @@
 .form {
-	// &_grid {
-	// 	display: flex;
-	// 	flex-wrap: wrap;
-	// 	margin: 0 -1em;
-	//
-	// 	.form__row {
-	// 		margin: 0 1em 2em;
-	// 		width: 100%;
-	//
-	// 		@media (min-width: 768px) {
-	// 			width: calc(50% - 2em);
-	// 		}
-	//
-	// 		&_full {
-	// 			width: 100%;
-	// 		}
-	// 	}
-	// }
-
 	&__title {
 		text-transform: uppercase;
 		line-height: 1.4;
 		font-size: 1.125em;
 		font-weight: 700;
-		margin-bottom: 1.77778em;
+		margin-bottom: 1.5em;
+
+		@media (min-width: 768px) {
+			margin-bottom: 1.77778em;
+
+		}
 	}
 
 	&__content {
@@ -33,7 +19,11 @@
 	}
 
 	&__row {
-		margin-bottom: 0.5em;
+		margin-bottom: 0.25em;
+		@media (min-width: 768px) {
+			margin-bottom: 0.5em;
+
+		}
 
 		.btn,
 		input:not([type]),
@@ -54,29 +44,73 @@
 			resize: vertical;
 		}
 
+		// .btn {
+		//
+		// 	@media (min-width: 768px) {
+		// 		padding: 1.094em 0.75em;
+		//
+		// 		span {
+		// 			font-size: 1.125em;
+		//
+		// 			&:after {
+		// 				display: inline-block;
+		// 				margin-left: 2em;
+		// 				font-size: 1.125em;
+		// 				transform: translateY(0.0625em);
+		// 			}
+		// 		}
+		//
+		// 	}
+		// }
+
+	}
+
+	&__row_group {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 1.875em;
+
 		.btn {
-			padding: 1.094em 0.75em;
+			width: 9.75em;
+			height: fit-content;
 
 			span {
-				font-size: 1.125em;
+				font-size: 1em;
 
 				&:after {
-					display: inline-block;
-					margin-left: 2em;
-					font-size: 1.125em;
-					transform: translateY(0.0625em);
+					margin-left: 1em;
+					font-size: 1em;
 				}
+			}
+
+		}
+	}
+
+	&__check {
+		flex: none;
+		display: flex;
+		width: 16.75em;
+
+		span {
+			margin-left: 0.75em;
+			font-size: 0.875em;
+
+			a {
+				font-size: 1em;
+				color: $main_color;
 			}
 		}
 
 	}
 
-	&__label {}
-
 	&__privacy {
-		margin-top: 1.75em;
-		line-height: 1.4;
-		font-size: 1em;
+		margin-top: 1.5em;
+		font-size: 0.875em;
+		@media (min-width: 768px) {
+			margin-top: 1.875em;
+			font-size: 1em;
+		}
+
 	}
 
 	// Input text and textarea ================================================
@@ -95,12 +129,17 @@
 		font-family: $main_font_family;
 
 		color: $color_bg_info;
-		padding: 0.945em 1.5em;
 		outline: none;
-		font-size: 1.125em;
 		font-weight: 400;
 		border-radius: 5.55556em;
 		transition: 0.3s;
+
+		font-size: 0.875em;
+		padding: 0.68em 1.125em;
+		@media (min-width: 768px) {
+			font-size: 1.125em;
+			padding: 0.945em 1.5em;
+		}
 
 		&:hover {
 			background-color: $color_white;
@@ -110,13 +149,41 @@
 			background-color: $color_white;
 		}
 
-		&.invalid {
-			}
+		&.invalid {}
 		// Placeholder for input +++++++++++++++
 		@include placeholder {
 			color: $color_bg_info;
 		}
 	}
+
+	// START FORM SM
+	&.form_sm {
+		input:not([type]),
+		input[type=date],
+		input[type=email],
+		input[type=number],
+		input[type=password],
+		input[type=search],
+		input[type=tel],
+		input[type=text],
+		input[type=url],
+		textarea {
+			font-size: 1em;
+			border: 0.0625em solid #D1CAC2;
+			padding: 1.032em 1.38em;
+		}
+
+		textarea {
+			min-height: 13.125em;
+			resize: vertical;
+			border-radius: 1.25em;
+		}
+
+		&__row {
+			margin-bottom: 0.625em;
+		}
+	}
+	// END FORM SM
 
 	input[type=search]::-webkit-search-cancel-button,
 	input[type=search]::-webkit-search-decoration {
@@ -133,6 +200,66 @@
 	/* Для Firefox */
 	input[type=number] {
 		appearance: textfield;
+	}
+
+	// Input checkbox and radio ===============================================
+	input[type=checkbox] {
+		padding: 0;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex: none;
+		height: 1.25em;
+		width: 1.25em;
+		color: #C6BDB3;
+
+		background: 0 0;
+		border: 0.0625em solid;
+		border-radius: 0.125em;
+		overflow: hidden;
+		vertical-align: middle;
+		appearance: none;
+		outline: 0;
+		text-align: center;
+		position: relative;
+
+		&:not(:disabled),
+		&:not(:disabled) {
+			cursor: pointer;
+		}
+
+		&:before,
+		&:before {
+			display: block;
+		}
+
+		&:disabled,
+		&:disabled {
+			color: #ddd;
+		}
+	}
+
+	input[type=checkbox] {
+		&:checked:before,
+		&:indeterminate:before {
+			content: "";
+			width: 40%;
+			height: 60%;
+			color: $color_bg_info;
+			margin-top: -0.1875em;
+			border-right: 0.0625em solid;
+			border-bottom: 0.0625em solid;
+			transform: rotate(45deg);
+		}
+
+		&:indeterminate:before {
+			content: "";
+		}
+
+		&:disabled:checked:before,
+		&:disabled:indeterminate:before {
+			color: #aaa;
+		}
 	}
 }
 
@@ -171,65 +298,60 @@
 					&__option {
 						padding: 0.971em 1.175em;
 						cursor: pointer;
-						color: rgba(29, 29, 27, 0.5);
+						color: $color_info;
 
 						&--highlighted[aria-selected] {
-							background: rgba(0, 110, 255, 0.19);
-							color: rgba(29, 29, 27, 0.6);
+							background: rgba($color_info, 1);
+							color: #D1CAC2;
 						}
 
 						&--selected {
-							background: rgba(0, 110, 255, 0.19);
-							color: $main_color;
+							background: rgba($color_info, 0.9);
+							color: #D1CAC2;
 						}
 					}
 				}
 
 				&-dropdown {
+					margin-top: 0.25em;
 					position: absolute;
-					// z-index: 150;
-					background-color: #fff;
-					border-radius: 0;
-					margin-top: 0;
-					border: 1px solid #DBDBDB;
-					border-top: 0;
-					box-shadow: 0 2.1875em 4.6875em rgba(128, 125, 125, 0.15);
-
-					&--below {}
-
-					&--above {}
+					overflow: hidden;
+					background-color: #F2EEE8;
+					border: 0.0625em solid #D1CAC2;
+					border-radius: 0.625em;
 				}
 
 				&-selection {
-					background: #FFFFFF;
-					border: 1px solid #DBDBDB;
+					background: #F2EEE8;
+					border: 0.0625em solid;
+					border-color: #D1CAC2;
 					font-family: $main_font_family;
-					color: $input_color;
-					// padding: 0.971em 1.175em;
-					padding: 0.65em 1em;
+					color: $color_info;
+					padding: 0.625em 0.675em;
 					outline: none;
 					font-weight: 400;
-					// border-radius: 0;
-					border-radius: 0.3125em;
+					border-radius: 0.42em;
 					transition: 0.3s;
 					transition-property: color background border;
 					width: 100%;
 					height: auto;
 					position: relative;
 
-					@media (min-width: 768px) {
-						font-size: 1em;
-					}
+					font-size: 1.5em;
+					line-height: 1;
+					cursor: pointer;
 
 					&:hover {
-						border-color: $input_hover_border_color;
-						background-color: transparentize($input_hover_bg_color, 0.9);
+						color: #F4F1EA;
+						background: $color_info;
+						border-color: $color_info;
+
+						.select2-selection__arrow {
+							color: #F4F1EA;
+						}
 					}
 
-					&:focus {
-						border-color: $input_focus_border_color;
-						background-color: transparentize($input_hover_bg_color, 0.9);
-					}
+					&:focus {}
 
 					&--single {
 						.select2 {
@@ -237,11 +359,10 @@
 								&__rendered {
 									line-height: 1;
 									padding: 0 1em 0 0;
-									color: $input_color;
 								}
 
 								&__placeholder {
-									color: $input_placeholder_color;
+									color: $color_info;
 									overflow: hidden;
 									white-space: nowrap;
 									text-overflow: ellipsis;
@@ -255,40 +376,21 @@
 									top: 0;
 									right: 0;
 									height: 100%;
-									width: 2.5em;
+									width: 2em;
 									padding-bottom: 0.3em;
 
-									.form__date & {
-										padding-bottom: 0;
-
-										&:before {
-											content: '';
-											display: block;
-											border: 0;
-											width: 0.6em;
-											height: 0.6em;
-											border-right: 2px solid rgba(29, 29, 27, 0.5);
-											border-bottom: 2px solid rgba(29, 29, 27, 0.5);
-											transform: rotate(-135deg);
-											margin-bottom: 0.5em;
-										}
-
-										b {
-											margin-top: 0.5em;
-										}
-									}
+									color: $color_info;
+									transition: color 0.3s;
 
 									b {
-										// rgba(29, 29, 27, 0.5);
-										// position: static;
 										left: auto;
 										top: auto;
 										margin: auto;
 										border: 0;
-										width: 0.6em;
-										height: 0.6em;
-										border-right: 2px solid rgba(29, 29, 27, 0.5);
-										border-bottom: 2px solid rgba(29, 29, 27, 0.5);
+										width: 0.5em;
+										height: 0.5em;
+										border-right: 2px solid;
+										border-bottom: 2px solid;
 										transform: rotate(45deg);
 									}
 								}
@@ -307,50 +409,14 @@
 
 						b {
 							border: 0;
-							width: 0.6em;
-							height: 0.6em;
-							border-right: 2px solid rgba(29, 29, 27, 0.5);
-							border-bottom: 2px solid rgba(29, 29, 27, 0.5);
+							width: 0.5em;
+							height: 0.5em;
+							border-right: 2px solid;
+							border-bottom: 2px solid;
 							transform: rotate(-135deg);
 
 						}
 
-						.form__date & {
-							// padding-bottom: 0.3em;
-
-							b {
-								transform: rotate(45deg);
-							}
-						}
-
-					}
-				}
-
-				&--disabled {
-					.select2 {
-						&-selection {
-							background: #FFFFFF;
-							border: 1px solid #DBDBDB;
-							font-family: $main_font_family;
-							color: $input_color;
-							padding: 0.971em 1.175em;
-							outline: none;
-							font-weight: 400;
-							border-radius: 0;
-							transition: 0.3s;
-							transition-property: color background border;
-							width: 100%;
-							height: auto;
-							position: relative;
-
-							&--single {
-								background: #FFFFFF;
-							}
-
-							&__rendered {
-								color: rgba(29, 29, 27, 0.5);
-							}
-						}
 					}
 				}
 			}

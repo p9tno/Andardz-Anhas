@@ -1,0 +1,38 @@
+.question {
+    &_feedback {
+        @media (min-width: 768px) {
+            margin-top: -3.875em;
+        }
+
+        .section__title {
+            padding-top: 5.5em;
+        }
+    }
+
+    &__content {
+        position: relative;
+    }
+
+    &__caption {
+        width: 33.75em;
+    }
+
+    &__form {
+        width: 28.125em;
+        margin-top: 2.625em;
+        padding-bottom: 1.75em;
+    }
+
+    &__label {
+        margin-top: 2.25em;
+    }
+
+    &__img {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 70.75em;
+    }
+
+}

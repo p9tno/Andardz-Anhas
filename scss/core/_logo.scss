@@ -6,7 +6,10 @@
         text-decoration: none;
         color: $color_primary;
         font-weight: 600;
-        font-size: 1.625em;
+        font-size: 0.875em;
+        @media (min-width: 768px) {
+            font-size: 1.625em;
+        }
 
         &:hover {
             color: $color_white;

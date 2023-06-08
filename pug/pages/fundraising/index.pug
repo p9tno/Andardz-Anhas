@@ -1,0 +1,94 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+
+block content
+
+    // begin breadcrumbs
+    section#breadcrumbs.breadcrumbs.section
+        .container_center.container_center_sm
+            .aioseo-breadcrumbs
+                span.aioseo-breadcrumb
+                    a(href="#") Main 
+
+                span.aioseo-breadcrumb-separator &middot;
+
+                span.aioseo-breadcrumb Fundraising
+
+
+
+    // end breadcrumbs
+
+    // begin fundraising
+    section#fundraising.fundraising.section.pt_0
+        .container_center.container_center_sm
+            h2.section__title
+                span Fundraising
+
+            .fundraising__categories
+                ul.cat-list
+                    li.cat-item.current-cat
+                        a(href="#") All
+                    each item in ['science', 'Technologies', 'Art and culture', 'Environment', 'Energy', 'Agriculture', 'Education', 'Sport', 'healthcare', 'Tourism and hospitality', 'Infrastructure' ]
+                        li.cat-item
+                            a(href="#")=item
+
+            .fundraising__sort
+                select.select(data-placeholder="One-Time 1")
+                    option(value="")
+                    option(value="1") One-Time 1
+                    option(value="2") One-Time 2
+                    option(value="3") One-Time 3
+
+
+            .fundraising__grid
+                each item in ['', '', '', '', '', '', '', '', '', ]
+
+                    //- start item
+                    .fundraising__item.br
+                        .fundraising__img.img
+                            img(src="../../img/fundraising.jpg", alt="alt")
+                            .fundraising__cat 
+                                span Art and culture
+                        .fundraising__content
+                            .fundraising__caption
+                                .fundraising__title Construction of 3 houses for our students
+                                .fundraising__status Active
+                            .fundraising__excerpt
+                                p In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses to make our students' overnight stay more educational and interesting. <a href="#">Learn more</a>
+                            .fundraising__progress
+                                .progress
+                                    .progress__info
+                                        .progress__sum
+                                            span $
+                                            span.sum  15,500.00
+
+                                        .progress__percent
+                                            span.percent 70
+                                            span  %
+
+                                    .progress__line
+                                        .progress__line_bg(style="width: 70%;")
+
+                            .fundraising__day
+                                .fundraising__circle
+                                    span 4
+                                span Days left
+
+                    //- end item
+
+            // start pagination
+            .pagination
+                a.prev
+                span.current 1
+                a(href="#") 2
+                span.dots ...
+                a(href="#") 10
+                a.next
+
+            // end pagination
+
+
+    // end fundraising

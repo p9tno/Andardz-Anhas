@@ -22,8 +22,84 @@
         }
     }
 
+    &__categories {
+        margin-top: 3.25em;
+
+        .cat-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.875em;
+        }
+
+        .cat-item {
+            a {
+                display: inline-block;
+                text-transform: uppercase;
+                text-decoration: none;
+                padding: 0.688em 1.415em;
+                border-radius: 6.25em;
+                border: 0.0625em solid;
+
+                background: #F2EEE8;
+                color: $color_bg_info;
+                border-color: #D1CAC2;
+
+                font-size: 1em;
+                line-height: 1;
+            }
+
+            &.current-cat {
+                a {
+                    color: #F4F1EA;
+                    background-color: $btn_color;
+                    border-color: $btn_color;
+
+                    &:after {
+                        display: inline-block;
+                        content: '\e913';
+                        font-family: $icon_font_famaly;
+                        font-size: 0.625em;
+                        margin-left: 1.125em;
+                        transform: translateY(-0.125em);
+
+                    }
+                }
+            }
+
+            @media (min-width: 768px) {
+                &:hover {
+                    a {
+                        color: #F4F1EA;
+                        background-color: $btn_color;
+                        border-color: $btn_color;
+                    }
+                }
+            }
+
+        }
+    }
+
+    &__sort {
+        margin-top: 3.25em;
+        @media (min-width: 768px) {
+            width: 15.625em;
+        }
+    }
+
     &__slider {
         margin-top: 3.25em;
+    }
+
+    &__grid {
+        margin-top: 2.375em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(43.75em, auto);
+        grid-gap: 1.25em;
 
     }
 
@@ -51,6 +127,7 @@
 
     &__img {
         height: 22.9375em;
+        position: relative;
     }
 
     &__content {

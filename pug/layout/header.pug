@@ -1,32 +1,87 @@
 header.header
-    .header__row
-        .header__col
-            .logo
-                a.logo__link(href="/") Andardz-Anhas
+    .header__content
+        .header__row
+            .header__col
+                .logo
+                    a.logo__link(href="/") Andardz-Anhas
 
-        .header__col
-            .toggle Menu
+            .header__col
+                .toggle Menu
 
-            .language
-                .language__label Language:&nbsp; 
-                .language__list
-                    .language__item Eng
-                    //- .language__item Ru
+                .language.desktop
+                    .language__toggle Language:&nbsp;
+                        span Eng
+                    .language__list
+                        a.language__item(href="#")
+                            .language__flag
+                                img(src="../../img/1.svg", alt="alt")
+                            span Eng
+                        a.language__item(href="#")
+                            .language__flag
+                                img(src="../../img/2.svg", alt="alt")
+                            span rus
+                        a.language__item(href="#")
+                            .language__flag
+                                img(src="../../img/3.svg", alt="alt")
+                            span ՀԱՅ
 
-        .header__col
-            .search
-                a.search__link(href="#") Search
 
-            .registration
+            .header__col.desktop
+                .search
+                    a.search__link(href="#") Search
+
+
+
+                .registration
+                    a.btn(href="#")
+                        span registration
+
+
+
+        .header__nav
+            .navbar__row
+                .navbar__close.desktop
+                nav.navbar#navbar
+                    ul.menu
+                        li.menu-item.current-menu-item
+                            a(href="#") Fundraising
+                        each item in ['What we do', 'Publications', 'Library', 'News', 'Write to us', 'Faq', 'Contact', ]
+                            li.menu-item
+                                a(href="#")=item
+
+            .navbar__row.mobile               
+                .language
+                    .language__toggle Language:&nbsp;
+                        span Eng
+                    .language__list
+                        a.language__item(href="#")
+                            .language__flag
+                                img(src="../../img/1.svg", alt="alt")
+                            span Eng
+                        a.language__item(href="#")
+                            .language__flag
+                                img(src="../../img/2.svg", alt="alt")
+                            span rus
+                        a.language__item(href="#")
+                            .language__flag
+                                img(src="../../img/3.svg", alt="alt")
+                            span ՀԱՅ
+
+            .navbar__row.mobile
+                .search
+                    form.search__form
+                        input.search__input(type="text" placeholder="Search" value="" name="s" autocomplete="off")
+                        //- input(type="hidden" value="post" name="post_type")
+                        button.search__btn
+                            i.icon_loup
+
+            .navbar__row.mobile
                 a.btn(href="#")
                     span registration
 
-        .header__nav
-            .navbar__close
-            nav.navbar#navbar
-                ul.menu
-                    li.menu-item.current-menu-item
-                        a(href="#") Fundraising
-                    each item in ['What we do', 'Publications', 'Library', 'News', 'Write to us', 'Faq', 'Contact', ]
-                        li.menu-item
-                            a(href="#")=item
+        .search__wrap.desktop
+            form.search__form
+                input.search__input(type="text" placeholder="Search" value="" name="s" autocomplete="off")
+                //- input(type="hidden" value="post" name="post_type")
+                button.search__btn
+                    i.icon_loup

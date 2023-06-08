@@ -6,7 +6,7 @@ footer.footer
                 .logo
                     a.logo__link(href="/") Andardz-Anhas
 
-                .messenger
+                .messenger.desktop
                     .messenger__list
                         .messenger__item
                             a.messenger__link(href="#" target="_blank")
@@ -42,13 +42,14 @@ footer.footer
                     // end form
                     .form__privacy By clicking on the button you consent to the processing of personal data in accordance with the privacy policy
 
+        .footer__row.footer__row_last.snakeline
             .footer__col
-                a.toTop(href="#wrapper") 
+                span All rights reserved © <script type="text/javascript">document.write(new Date().getFullYear());</script>
+                a(href="#") Conditions and wishes
+                a(href="#") Privacy Policy
+                a(href="#") By Deesse Media
 
 
-
-        .footer__row.snakeline
-            span All rights reserved © <script type="text/javascript">document.write(new Date().getFullYear());</script>
-            a(href="#") Conditions and wishes
-            a(href="#") Privacy Policy
-            a(href="#") By Deesse Media
+        a.toTop(href="#wrapper")
+            .toTop__arrow
+            span Back To Top
