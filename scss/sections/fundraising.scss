@@ -1,4 +1,6 @@
 .fundraising {
+    overflow: hidden;
+
     &__head {
         @media (min-width: 768px) {
             display: flex;
@@ -11,7 +13,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 10.625em;
+        margin-top: 2.5em;
+
+        @media (min-width: 768px) {
+            margin-top: 0;
+            width: 10.625em;
+        }
 
         a {
             font-size: 1.125em;
@@ -23,7 +30,11 @@
     }
 
     &__categories {
-        margin-top: 3.25em;
+        margin-top: 1.5em;
+        @media (min-width: 768px) {
+            margin-top: 3.25em;
+
+        }
 
         .cat-list {
             margin: 0;
@@ -31,11 +42,33 @@
             list-style: none;
 
             display: flex;
-            flex-wrap: wrap;
-            gap: 0.875em;
+
+            @media (max-width: 767px) {
+                position: relative;
+                overflow-x: auto;
+                overflow-y: hidden;
+                margin-bottom: 1em;
+                padding-bottom: 1.25em;
+            }
+
+            @media (min-width: 768px) {
+                flex-wrap: wrap;
+                gap: 0.875em;
+            }
         }
 
         .cat-item {
+            width: fit-content;
+            flex: none;
+            @media (max-width: 767px) {
+                margin-right: 0.5em;
+
+                &:last-child {
+                    margin-right: 0;
+                    padding-right: 0.0625em;
+                }
+            }
+
             a {
                 display: inline-block;
                 text-transform: uppercase;
@@ -48,8 +81,12 @@
                 color: $color_bg_info;
                 border-color: #D1CAC2;
 
-                font-size: 1em;
                 line-height: 1;
+                font-size: 0.75em;
+                @media (min-width: 768px) {
+                    font-size: 1em;
+
+                }
             }
 
             &.current-cat {
@@ -84,54 +121,106 @@
     }
 
     &__sort {
-        margin-top: 3.25em;
+        margin-top: 1.5em;
+        font-size: 0.75em;
         @media (min-width: 768px) {
+            font-size: 1em;
+            margin-top: 3.25em;
             width: 15.625em;
         }
     }
 
     &__slider {
-        margin-top: 3.25em;
+        margin-top: 2.5em;
+        @media (min-width: 768px) {
+            margin-top: 3.25em;
+        }
+
+        .swiper {
+            width: 32.375em;
+            @media (min-width: 768px) {
+                width: auto;
+            }
+
+        }
     }
 
     &__grid {
         margin-top: 2.375em;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-auto-rows: minmax(43.75em, auto);
-        grid-gap: 1.25em;
 
+        @media (min-width: 768px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-auto-rows: minmax(43.75em, auto);
+            grid-gap: 1.25em;
+        }
+
+        .fundraising__item {
+            margin-bottom: 0.625em;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            @media (min-width: 768px) {
+                margin-bottom: 0;
+
+            }
+        }
     }
 
     &__item {
         background-color: #FEFCFA;
+        position: relative;
     }
 
     &__cat {
         position: absolute;
-        top: 1.75em;
-        left: 1.75em;
+        top: 0.625em;
+        left: 0.625em;
+
+        @media (min-width: 768px) {
+            top: 1.75em;
+            left: 1.75em;
+
+        }
 
         span {
             display: inline-block;
             line-height: 1;
             text-transform: uppercase;
-            font-size: 0.875em;
             font-weight: 700;
-            padding: 0.65em 0.913em;
             border-radius: 7.125em;
             color: $color_bg_primary;
             background-color: $btn_color;
+
+            font-size: 0.75em;
+            padding: 0.42em 0.913em;
+            @media (min-width: 768px) {
+                font-size: 0.875em;
+                padding: 0.65em 0.913em;
+
+            }
         }
     }
 
     &__img {
-        height: 22.9375em;
         position: relative;
+        height: 10.375em;
+        @media (min-width: 768px) {
+            height: 22.9375em;
+
+        }
     }
 
     &__content {
-        padding: 1.6875em 2em 2.375em;
+        padding: 1.75em 1em 2.25em;
+
+        @media (min-width: 768px) {
+            padding: 1.6875em 2em 2.375em;
+
+        }
+
     }
 
     &__caption {
@@ -140,22 +229,25 @@
     }
 
     &__title {
-        width: 12.25em;
-        min-height: 2.1875em;
-
-        font-size: 2em;
         letter-spacing: -0.02em;
         line-height: 1.1;
-
         color: $color_info;
+        font-size: 1.25em;
+
+        @media (min-width: 768px) {
+            font-size: 2em;
+            width: 12.25em;
+            min-height: 2.1875em;
+
+        }
     }
 
     &__status {
-        flex: none;
-        position: relative;
-        height: fit-content;
+        position: absolute;
+        top: 3.75em;
+        left: 1.125em;
+
         padding: 0.572em 0.75em 0.572em 1.5714em;
-        margin-top: 0.5em;
         border: 0.125em solid $btn_color;
         border-radius: 7.125em;
 
@@ -167,6 +259,17 @@
         background-color: #FEFCFA;
 
         line-height: 1;
+        font-size: 0.584em;
+
+        @media (min-width: 768px) {
+            flex: none;
+            position: relative;
+            top: auto;
+            left: auto;
+            font-size: 1em;
+            margin-top: 0.5em;
+            height: fit-content;
+        }
 
         &:before {
             position: absolute;
@@ -186,9 +289,15 @@
         margin-top: 0.75em;
 
         p {
-            line-height: 1.25;
+            line-height: 1.38;
             margin: 0;
-            min-height: 3.75em;
+            font-size: 0.875em;
+
+            @media (min-width: 768px) {
+                line-height: 1.25;
+                min-height: 3.75em;
+                font-size: 1em;
+            }
 
             a {
                 font-size: 1em;
@@ -201,14 +310,30 @@
     }
 
     &__progress {
-        margin-top: 1.625em;
+        margin-top: 1.5em;
+        @media (min-width: 768px) {
+            margin-top: 1.625em;
+
+        }
     }
 
     &__day {
-        margin-top: 1.625em;
         display: flex;
         align-items: center;
         color: $color_info;
+        margin-top: 1em;
+
+        @media (min-width: 768px) {
+            margin-top: 1.625em;
+
+        }
+
+        > span {
+            font-size: 0.875em;
+            @media (min-width: 768px) {
+                font-size: 1em;
+            }
+        }
 
     }
 
@@ -222,7 +347,11 @@
         border: 0.0625em solid $color_info;
         background-color: #F2EEE8;
 
-        margin-right: 0.75em;
+        margin-right: 0.5625em;
+        @media (min-width: 768px) {
+            margin-right: 0.75em;
+
+        }
 
         span {
             position: absolute;
@@ -247,7 +376,11 @@
         letter-spacing: -0.02em;
 
         span {
-            font-size: 2em;
+            font-size: 1.375em;
+            @media (min-width: 768px) {
+                font-size: 2em;
+
+            }
         }
     }
 
@@ -262,10 +395,14 @@
     &__line {
         width: 100%;
         height: 0.25em;
-        margin-top: 0.625em;
         border-radius: 6em;
         background-color: rgba(#ACA092, 0.4);
         overflow: hidden;
+        margin-top: 0.5em;
+        @media (min-width: 768px) {
+            margin-top: 0.625em;
+
+        }
 
         &_bg {
             border-radius: 6em;

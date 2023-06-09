@@ -60,8 +60,8 @@ $(document).ready(function() {
     });
 
     const fundraising = new Swiper('.swiper_fundraising_js', {
-        slidesPerView: 3,
-        spaceBetween: 20,
+        slidesPerView: 2,
+        spaceBetween: 10,
         speed: 800,
         loop: true,
         autoplay: {
@@ -74,10 +74,10 @@ $(document).ready(function() {
         },
 
         breakpoints: {
-            // 768: {
-            //     spaceBetween: 27,
-            //     slidesPerView: 4,
-            // },
+            768: {
+                spaceBetween: 20,
+                slidesPerView: 3,
+            },
 
         }
     });
@@ -101,27 +101,47 @@ $(document).ready(function() {
             prevEl: '.swiper_nav .icon_arrow_left',
         },
         pagination: {
-            el: '.news_fraction_js',
+            el: '.news_fraction_m_js',
             type: "fraction",
         },
+
+        breakpoints: {
+            768: {
+                pagination: {
+                    el: '.news_fraction_js',
+                    type: "fraction",
+                },
+            },
+
+        }
 
     });
 
     const library = new Swiper('.swiper_library_js', {
-        slidesPerView: 3,
-        spaceBetween: 20,
+        slidesPerView: 2,
+        spaceBetween: 10,
         speed: 800,
         loop: true,
 
-        // autoplay: {
-        //     delay: 5000,
-        // },
+        autoHeight: true,
+
+        autoplay: {
+            delay: 5000,
+        },
 
 
         navigation: {
             nextEl: '.library .icon_arrow_right',
             prevEl: '.library .icon_arrow_left',
         },
+
+        breakpoints: {
+            768: {
+                spaceBetween: 20,
+                slidesPerView: 3,
+            },
+
+        }
 
 
     });

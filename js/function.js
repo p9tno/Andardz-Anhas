@@ -191,48 +191,48 @@ $(document).ready(function() {
     // doDrop();
 
     function initSelect2 () {
-        function addIcon(icon) {
-            if (!icon.id) {
-                return icon.text;
-            }
-            let $icon = $(
-                '<span><span></span><i></i></span>'
-            );
-            $icon.find("span").text(icon.text);
-            $icon.find("i").attr("class", "icon_" + icon.element.value.toLowerCase());
-            return $icon;
-        }
-
         $('.select').select2({
             placeholder: $(this).data('placeholder'),
             minimumResultsForSearch: Infinity,
-            // templateSelection: addIcon,
         });
-
-        // $('.select').on('change',function() {
-        //     let val = $(this).val();
-        //     let form = $(this).closest('.form');
-        //     let phone = form.find('.form__row_phone_js');
-        //     let mail = form.find('.form__row_email_js');
-
-        //     if ( val == 'mail'){
-        //         mail.removeClass('form__row_hide');
-        //         mail.find('input').prop('required',true);
-
-        //         phone.addClass('form__row_hide');
-        //         phone.find('input').prop('required',false);
-
-        //     } else {
-        //         mail.addClass('form__row_hide');
-        //         mail.find('input').prop('required',false);
-
-        //         phone.removeClass('form__row_hide');
-        //         phone.find('input').prop('required',true);
-        //     }
-        // })
     }
     initSelect2();
 
+
+    function showMore(classItem, btn) {
+        // let classItem = '.vacancies__item';
+        // let classItem = class;
+        let item = $(''+ classItem +'');
+        let count = item.length;
+        let start = 3;
+        let show = 3;
+
+        item.addClass('d-none');
+        $('' + classItem + ':lt(' + start + ')').removeClass('d-none');
+
+        $(btn).click(function(e) {
+            e.preventDefault();
+            $(this).addClass('loading');
+
+            let load = $(this).data('load');
+            let more = $(this).data('more');
+
+            start = (start + show <= count) ? start + show : count;
+
+            $(this).text(load);
+
+            setTimeout(() => {
+                $(''+ classItem +':lt(' + start + ')').removeClass('d-none');
+                if ($(''+ classItem +':not(.d-none)').length == count) {
+                    $(this).parent().remove();
+                }
+                $(this).removeClass('loading');
+                $(this).text(more);
+            }, 500);
+        });
+
+    }
+    showMore('.faq_grid_home_js > .faq__item', '.show_more_js');
 
 
 })

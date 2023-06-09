@@ -342,13 +342,7 @@
 					cursor: pointer;
 
 					&:hover {
-						color: #F4F1EA;
-						background: $color_info;
 						border-color: $color_info;
-
-						.select2-selection__arrow {
-							color: #F4F1EA;
-						}
 					}
 
 					&:focus {}

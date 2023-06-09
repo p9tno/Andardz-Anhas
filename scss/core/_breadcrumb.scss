@@ -1,6 +1,13 @@
 .breadcrumbs {
-	padding-top: 3.125em;
-	padding-bottom: 2.375em;
+	padding-top: 1em;
+	padding-bottom: 2em;
+
+	font-size: 0.75em;
+	@media (min-width: 768px) {
+		font-size: 1em;
+		padding-top: 3.125em;
+		padding-bottom: 2.375em;
+	}
 
 	.aioseo-breadcrumbs {
 		a,
