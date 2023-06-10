@@ -5,7 +5,10 @@
         }
 
         .section__title {
-            padding-top: 5.5em;
+            @media (min-width: 768px) {
+                padding-top: 5.5em;
+
+            }
         }
     }
 
@@ -14,25 +17,40 @@
     }
 
     &__caption {
-        width: 33.75em;
+        @media (min-width: 768px) {
+            width: 33.75em;
+        }
     }
 
     &__form {
-        width: 28.125em;
-        margin-top: 2.625em;
-        padding-bottom: 1.75em;
+        margin-top: 1.25em;
+
+        @media (min-width: 768px) {
+            margin-top: 2.625em;
+            padding-bottom: 1.75em;
+
+            width: 28.125em;
+        }
     }
 
     &__label {
-        margin-top: 2.25em;
+        margin-top: 1.5em;
+        font-size: 0.875em;
+        @media (min-width: 768px) {
+            margin-top: 2.25em;
+            font-size: 1em;
+        }
     }
 
     &__img {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        width: 70.75em;
+        @media (min-width: 768px) {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 70.75em;
+
+        }
     }
 
 }

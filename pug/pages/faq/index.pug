@@ -29,12 +29,14 @@ block content
             .faq__grid
                 each item in ['In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', 'In "Ayg" Armenological and Esoteric School-Center, we have started the construction of tree houses ', ]
                     .faq__item
-                        .faq__img.img
-                            img(src="../../img/faq.jpg", alt="alt")
+
                         .faq__content
                             .faq__title Construction of 3 houses for our students 
                             .faq__excerpt
                                 p=item 
+
+                        .faq__img.img
+                            img(src="../../img/faq.jpg", alt="alt")
 
             // start pagination
             .pagination
@@ -75,16 +77,18 @@ block content
 
                         .form__row.form__row_group
 
+                            button.btn.btn_reverse(type="submit")
+                                span Send
+
                             label.form__check
                                 input(type="checkbox" checked="checked")
                                 span I confirm my agreement with the rules for the provision of <a href="#" target="_blank">information services</a>
 
-                            button.btn.btn_reverse(type="submit")
-                                span Send
 
 
 
-                .question__img.img.br
+
+                .question__img.img.br.desktop
                     img(src="../../img/question.webp", alt="alt")
 
 
