@@ -31,6 +31,26 @@
 
             width: 28.125em;
         }
+
+        .form__row_group {
+            .btn {
+                @media (min-width: 768px) {
+                    width: 9.75em;
+                    height: fit-content;
+
+                    span {
+                        font-size: 1em;
+
+                        &:after {
+                            margin-left: 1em;
+                            font-size: 1em;
+                        }
+                    }
+
+                }
+            }
+        }
+
     }
 
     &__label {

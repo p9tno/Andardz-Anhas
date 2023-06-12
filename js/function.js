@@ -141,6 +141,23 @@ $(document).ready(function() {
     }
     showLanguage()
 
+    function togglePassword() {
+        $('.form__password .icon_eyes').click(function(event) {
+            let input = $(this).closest('.form__password').find('input');
+            // console.log('click');
+            // console.log(input);
+            if (input.attr('type') == 'password') {
+                $(this).addClass('view');
+                input.attr('type', 'text');
+            } else {
+                $(this).removeClass('view');
+                input.attr('type', 'password');
+            }
+        });
+    }
+    togglePassword()
+
+
     // function collapsed() {
     //     let toggle = $('[data-collapse]');
     //

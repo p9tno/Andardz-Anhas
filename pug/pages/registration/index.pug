@@ -1,0 +1,62 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+    -var registration = true;
+
+
+block content
+
+    // begin registration
+    section#registration.registration.section
+        a.registration__back(href="/")
+        .registration__content
+            .registration__left
+                h1.registration__title
+                    span Sign in
+                .registration__soc
+                    .soc
+                        each item in [ {img: '1', label: 'Google Play'}, {img: '2', label: 'Facebook'}, {img: '3', label: 'Apple ID'}, ]
+                            a(href="#").soc__item
+                                .soc__img.img
+                                    img(src="../../img/soc_"+item.img+".svg", alt="alt")
+                                .soc__label=item.label
+
+                .registration__line 
+                    span Or
+
+                .registration__form
+                    form.form.form_sm(action="send.php")
+                        input(type="hidden" name="subject" value="форма в футоре")
+                        input(type="hidden" name="notspam" value="")
+
+                        .form__row
+                            input(type="email" placeholder="E-mail")
+
+                        .form__row
+                            .form__password
+                                input(type="password" placeholder="Password")
+                                i.icon_eyes
+
+                        .form__row.form__row_group
+
+                            button.btn.btn_sm.btn_reverse(type="submit")
+                                span sign in
+
+
+                            label.form__check
+                                input(type="checkbox" checked="checked")
+                                span Remember me
+
+                .registration__line
+                    span Don't have an account?
+
+                .registration__btn
+                    a.btn.btn_sm(href="#") 
+                        span Sign up
+
+            .registration__right
+                .registration__img.img
+                    img(src="../../img/registration.webp", alt="alt")
+
+    // end registration

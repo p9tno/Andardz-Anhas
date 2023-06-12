@@ -56,24 +56,6 @@
 			flex-direction: row-reverse;
 		}
 
-		.btn {
-
-			@media (min-width: 768px) {
-				width: 9.75em;
-				height: fit-content;
-
-				span {
-					font-size: 1em;
-
-					&:after {
-						margin-left: 1em;
-						font-size: 1em;
-					}
-				}
-
-			}
-		}
-
 		.form__check {
 			margin-top: 0.75em;
 			@media (min-width: 768px) {
@@ -110,6 +92,41 @@
 		@media (min-width: 768px) {
 			margin-top: 1.875em;
 			font-size: 1em;
+		}
+
+	}
+
+	&__password {
+		position: relative;
+
+		input[type=password],
+		input[type=text] {
+			padding-right: 4em!important;
+		}
+
+		.icon_eyes {
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			right: 0.5em;
+			transform: translateY(-50%);
+
+			font-size: 1.75em;
+			color: #ACA092;
+			padding: 0.025em 0.125em;
+			cursor: pointer;
+			transition: 0.3s;
+
+			@media (min-width: 768px) {
+				right: 0.75em;
+
+			}
+
+			&.view,
+			&:hover {
+				color: $btn_color;
+			}
+
 		}
 
 	}
