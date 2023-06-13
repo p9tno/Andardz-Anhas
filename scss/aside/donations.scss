@@ -1,0 +1,92 @@
+.donations {
+    padding: 1.75em 1em;
+
+    @media (min-width: 768px) {
+        padding: 2.75em 2.75em 3.375em;
+
+    }
+
+    &__caption {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        font-size: 1.25em;
+        color: $btn_color;
+        line-height: 1;
+        width: 9em;
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+
+        }
+    }
+
+    &__form {
+        margin-top: 1.125em;
+        @media (min-width: 768px) {
+            margin-top: 1.625em;
+        }
+
+        .form {
+            input:not([type]),
+            input[type=date],
+            input[type=email],
+            input[type=number],
+            input[type=password],
+            input[type=search],
+            input[type=tel],
+            input[type=text],
+            input[type=url],
+            textarea {
+                font-family: $second_font_family;
+                background: #FAF6F0;
+                border: 0.0625em solid #C6BDB3;
+                border-radius: 6.25em;
+                line-height: 1;
+                padding: 0.5em 1.125em 0.2em;
+
+                font-size: 1.259em;
+                @media (min-width: 768px) {
+                    font-size: 1.5em;
+                }
+            }
+        }
+
+        .form__row {
+            margin-bottom: 0;
+        }
+
+        @media (max-width: 767px) {
+            .btn {
+                span {
+                    font-size: 0.8em;
+                }
+            }
+
+        }
+
+    }
+
+    &__info {
+        color: #78716A;
+        text-align: center;
+        line-height: 1;
+
+        font-size: 0.75em;
+        margin: 1em 0 1.5em;
+        @media (min-width: 768px) {
+            font-size: 0.875em;
+            margin: 1.5em 0 2.5em;
+
+        }
+    }
+
+    .hand {
+        font-size: 0.75em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
+    }
+}

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/swiper-bundle.min.css"/>
-    <link rel="stylesheet" type="text/css" href="/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../../css/swiper-bundle.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../..//style.css"/>
   </head>
   <body>
     <div class="wrapper" id="wrapper">
@@ -75,27 +75,97 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin projectNaw-->
-        <section class="projectNaw section" id="projectNaw">
-          <div class="container_center">
-            <h2 class="section__title"><span>Навигация по проекту</span></h2>
-            <ul style="font-size:1.25em;">
-              <li><a href="../pages/home/">Главная </a></li>
-              <li><a href="../pages/news/">Новости (архив) </a></li>
-              <li><a href="../pages/library/">Библиотека (архив) </a></li>
-              <li><a href="../pages/fundraising/">Cбор средств (архив) </a></li>
-              <li><a href="../pages/faq/">faq (архив) </a></li>
-              <li><a href="../pages/feedback/">feedback</a></li>
-              <li><a href="../pages/searchpage/">searchpage</a></li>
-              <li><a href="../pages/registration/">Sign in</a></li>
-              <li><a href="../pages/registration2/">Sign up</a></li>
-              <li><a href="../pages/office/">office 1 ( My personal information )</a></li>
-              <li><a href="../pages/office2">office 2 ( Payment History )</a></li>
-              <li><a href="../pages/office3/">office 3 ( Notifications )</a></li>
-            </ul>
+        <!-- begin content-->
+        <section class="content section" id="content">
+          <div class="container_center container_center_sm">
+            <div class="content__wrap">
+              <div class="content__aside">
+                <div class="aside">
+                  <div class="aside__list">
+                    <div class="aside__item">
+                      <div class="account">
+                        <div class="account__head">
+                          <div class="account__img img"><img src="../../img/account.jpg" alt="alt"/></div>
+                          <div class="account__info">
+                            <div class="account__name">Aleksandra Holodnaya</div>
+                            <div class="account__edit"><i class="icon_edit"></i><a href="#">Edit Profile</a></div>
+                          </div>
+                        </div>
+                        <nav class="account__nav">
+                          <ul class="menu">
+                            <li class="menu-item current-menu-item"><a href="#">My information</a></li>
+                            <li class="menu-item"><a href="#">Payment History</a></li>
+                            <li class="menu-item"><a href="#">Notifications</a></li>
+                            <li class="menu-item"><a href="#">Log out</a></li>
+                          </ul>
+                        </nav>
+                      </div>
+                    </div>
+                    <div class="aside__item">
+                      <div class="donations">
+                        <div class="donations__caption">
+                          <div class="donations__title">Monthly donations to our foundation</div>
+                          <div class="hand">
+                            <div class="hand__wrap">
+                              <div class="hand__img"><img src="../../img/hand.webp" alt="alt"/></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="donations__form">
+                          <form class="form" action="send.php">
+                            <input type="hidden" name="subject" value="форма в футоре"/>
+                            <input type="hidden" name="notspam" value=""/>
+                            <div class="form__row">
+                              <input type="text" placeholder="$ 1000"/>
+                            </div>
+                            <div class="donations__info">Withdrawal on the 1st of each month</div>
+                            <div class="form__row">
+                              <button class="btn btn_sm" type="submit"><span>cancel your donation</span></button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content__main">
+                <!-- begin breadcrumbs-->
+                <div class="breadcrumbs">
+                  <div class="aioseo-breadcrumbs"><span class="aioseo-breadcrumb"><a href="#">Main </a></span><span class="aioseo-breadcrumb-separator">&middot;</span><span class="aioseo-breadcrumb">Personal account</span></div>
+                </div>
+                <!-- end breadcrumbs-->
+                <h1 class="section__title section__title_sm"><span>Payment History</span></h1>
+                <div class="paymentHistory">
+                  <div class="paymentHistory__list">
+                    <div class="paymentHistory__item">
+                      <div class="paymentHistory__col"><span>Art and culture</span>
+                        <p>Construction of 3 houses for our students of 3 houses for our</p>
+                      </div>
+                      <div class="paymentHistory__col"><span>$ 1000.00</span></div>
+                      <div class="paymentHistory__col"><a class="btn btn_sm btn_reverse" href="#"><span>repeat</span></a></div>
+                    </div>
+                    <div class="paymentHistory__item">
+                      <div class="paymentHistory__col"><span>Technologies</span>
+                        <p>Construction of 3 houses for our students of 3 houses for our</p>
+                      </div>
+                      <div class="paymentHistory__col"><span>$ 200.00</span></div>
+                      <div class="paymentHistory__col"><a class="btn btn_sm btn_reverse" href="#"><span>repeat</span></a></div>
+                    </div>
+                    <div class="paymentHistory__item">
+                      <div class="paymentHistory__col"><span>Art and culture</span>
+                        <p>Construction of 3 houses for our students of 3 houses for our</p>
+                      </div>
+                      <div class="paymentHistory__col"><span>$ 115.50</span></div>
+                      <div class="paymentHistory__col"><a class="btn btn_sm btn_reverse" href="#"><span>repeat</span></a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
-        <!-- end projectNaw-->
+        <!-- end content-->
       </main>
       <footer class="footer">
         <div class="footer__content">
@@ -169,12 +239,12 @@
         </div>
       </div>
       <!-- End modal info-->
-      <script src="js/jquery.js"></script>
-      <script src="js/modal.js"></script>
-      <script src="js/swiper-bundle.min.js"></script>
-      <script src="js/slider.js"></script>
-      <script src="js/select2.min.js"></script>
-      <script src="js/function.js"></script>
+      <script src="../../js/jquery.js"></script>
+      <script src="../../js/modal.js"></script>
+      <script src="../../js/swiper-bundle.min.js"></script>
+      <script src="../../js/slider.js"></script>
+      <script src="../../js/select2.min.js"></script>
+      <script src="../../js/function.js"></script>
     </div>
   </body>
 </html>

@@ -1,0 +1,15 @@
+.aside {
+    &__list {}
+
+    &__item {
+        background: #F2EEE8;
+        border: 0.0625em solid #D1CAC2;
+        border-radius: 1.25em;
+        margin-bottom: 0.625em;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+}

@@ -75,18 +75,6 @@
         </div>
       </header>
       <main class="main_content">
-        <!-- begin office-->
-        <section class="office section" id="office">
-          <div class="container_center container_center_sm">
-            <div class="office__wrap">
-              <div class="office__aside">
-                <div class="aside"></div>
-              </div>
-              <div class="office__content"></div>
-            </div>
-          </div>
-        </section>
-        <!-- end office-->
         <!-- begin content-->
         <section class="content section" id="content">
           <div class="container_center container_center_sm">
@@ -114,12 +102,81 @@
                       </div>
                     </div>
                     <div class="aside__item">
-                      <div class="donations"></div>
+                      <div class="donations">
+                        <div class="donations__caption">
+                          <div class="donations__title">Monthly donations to our foundation</div>
+                          <div class="hand">
+                            <div class="hand__wrap">
+                              <div class="hand__img"><img src="../../img/hand.webp" alt="alt"/></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="donations__form">
+                          <form class="form" action="send.php">
+                            <input type="hidden" name="subject" value="форма в футоре"/>
+                            <input type="hidden" name="notspam" value=""/>
+                            <div class="form__row">
+                              <input type="text" placeholder="$ 1000"/>
+                            </div>
+                            <div class="donations__info">Withdrawal on the 1st of each month</div>
+                            <div class="form__row">
+                              <button class="btn btn_sm" type="submit"><span>cancel your donation</span></button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="content__main"></div>
+              <div class="content__main">
+                <!-- begin breadcrumbs-->
+                <div class="breadcrumbs">
+                  <div class="aioseo-breadcrumbs"><span class="aioseo-breadcrumb"><a href="#">Main </a></span><span class="aioseo-breadcrumb-separator">&middot;</span><span class="aioseo-breadcrumb">Personal account</span></div>
+                </div>
+                <!-- end breadcrumbs-->
+                <h1 class="section__title section__title_sm"><span>My personal information</span></h1>
+                <div class="myInformation">
+                  <div class="myInformation__photo">
+                    <div class="myInformation__icon"><i class="icon_man"></i></div>
+                    <div class="myInformation__upload"><span>Upload an image in jpg, gif, png format no more than 10 MB</span><a href="#">Upload Photo</a></div>
+                  </div>
+                  <div class="myInformation__form">
+                    <form class="form form_sm form_grid" action="send.php">
+                      <input type="hidden" name="subject" value="форма в футоре"/>
+                      <input type="hidden" name="notspam" value=""/>
+                      <div class="form__row form__row_full">
+                        <div class="form__label">My information</div>
+                      </div>
+                      <div class="form__row">
+                        <input type="text" placeholder="Name"/>
+                      </div>
+                      <div class="form__row">
+                        <input type="text" placeholder="Surname"/>
+                      </div>
+                      <div class="form__row form__row_full">
+                        <input type="email" placeholder="E-mail"/>
+                      </div>
+                      <div class="form__row form__row_full">
+                        <div class="form__label">Password</div>
+                      </div>
+                      <div class="form__row form__row_full">
+                        <div class="form__password">
+                          <input type="password" placeholder="Password"/><i class="icon_eyes"></i>
+                        </div>
+                      </div>
+                      <div class="form__row form__row_full">
+                        <div class="form__password">
+                          <input type="password" placeholder="New password"/><i class="icon_eyes"></i>
+                        </div>
+                      </div>
+                      <div class="form__row form__row_full">
+                        <button class="btn btn_sm btn_reverse" type="submit"><span>Save</span></button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>

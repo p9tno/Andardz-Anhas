@@ -1,0 +1,128 @@
+.account {
+    padding: 1.75em 1.25em;
+    font-size: 0.7em;
+
+    @media (min-width: 768px) {
+        font-size: 1em;
+        padding: 2.75em 2.75em 3.375em;
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+    }
+
+    &__img {
+        flex: none;
+        width: 8.625em;
+        height: 8.625em;
+        border-radius: 100%;
+        overflow: hidden;
+        margin-right: 1.625em;
+    }
+
+    &__info {}
+
+    &__name {
+        font-size: 1.5em;
+        color: $btn_color;
+        line-height: 1;
+    }
+
+    &__edit {
+        margin-top: 1.625em;
+        display: flex;
+        align-items: center;
+
+        a {
+            font-size: 0.875em;
+            color: #6D665E;
+            font-family: 'Montserrat';
+        }
+
+        i {
+            font-size: 0.875em;
+            color: #6D665E;
+            margin-right: 0.75em;
+
+        }
+    }
+
+    &__nav {
+        margin-top: 2.125em;
+
+        .menu {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .menu-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1em;
+            @media (min-width: 768px) {
+                margin-bottom: 2em;
+            }
+
+            &.current-menu-item {
+                margin-bottom: 1.5em;
+                @media (min-width: 768px) {
+                    margin-bottom: 2.875em;
+
+                }
+
+                a {
+                    color: $btn_color;
+                }
+
+                &:after {
+                    color: $btn_color;
+                    opacity: 1;
+                }
+
+                &:before {
+                    width: 100%;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                a {
+                    color: $btn_color;
+                }
+            }
+
+            &:after {
+                content: '\e90d';
+                font-family: $icon_font_famaly;
+                display: inline-block;
+                transform: translateY(0.2em);
+                opacity: 0;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                display: inline-block;
+                width: 0;
+                left: 0;
+                bottom: -0.875em;
+                border-bottom: 0.0625em solid;
+                border-color: $btn_color;
+            }
+
+            a {
+                font-size: 1.5em;
+                text-decoration: none;
+                color: #C6BDB3;
+            }
+        }
+    }
+
+}

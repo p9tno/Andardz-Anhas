@@ -1,0 +1,13 @@
+.paymentHistory
+    .paymentHistory__list
+        each item in [ {cat: 'Art and culture', sum: '$ 1000.00' }, {cat: 'Technologies', sum: '$ 200.00' }, {cat: 'Art and culture', sum: '$ 115.50' } ]
+
+            .paymentHistory__item
+                .paymentHistory__col
+                    span=item.cat
+                    p Construction of 3 houses for our students of 3 houses for our
+                .paymentHistory__col
+                    span=item.sum
+                .paymentHistory__col
+                    a.btn.btn_sm.btn_reverse(href="#")
+                        span repeat

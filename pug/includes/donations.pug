@@ -1,0 +1,24 @@
+//- begin aside item
+.aside__item
+    .donations
+        .donations__caption
+            .donations__title Monthly donations to our foundation
+            .hand
+                .hand__wrap
+                    .hand__img
+                        img(src="../../img/hand.webp" alt="alt")
+        .donations__form
+            form.form(action="send.php")
+                input(type="hidden" name="subject" value="форма в футоре")
+                input(type="hidden" name="notspam" value="")
+
+                .form__row
+                    input(type="text" placeholder="$ 1000")
+
+                .donations__info Withdrawal on the 1st of each month
+
+                .form__row
+                    button.btn.btn_sm(type="submit")
+                        span cancel your donation
+
+//- end aside item

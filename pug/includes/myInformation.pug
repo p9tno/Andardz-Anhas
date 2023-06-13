@@ -1,0 +1,44 @@
+.myInformation
+
+    .myInformation__photo
+        .myInformation__icon
+            i.icon_man
+        .myInformation__upload
+            span Upload an image in jpg, gif, png format no more than 10 MB
+            a(href="#") Upload Photo
+
+    .myInformation__form
+        form.form.form_sm.form_grid(action="send.php")
+            input(type="hidden" name="subject" value="форма в футоре")
+            input(type="hidden" name="notspam" value="")
+
+
+            .form__row.form__row_full
+                .form__label My information
+
+            .form__row
+                input(type="text" placeholder="Name")
+
+            .form__row
+                input(type="text" placeholder="Surname")
+
+            .form__row.form__row_full
+                input(type="email" placeholder="E-mail")
+
+
+            .form__row.form__row_full
+                .form__label Password
+
+            .form__row.form__row_full
+                .form__password
+                    input(type="password" placeholder="Password")
+                    i.icon_eyes
+
+            .form__row.form__row_full
+                .form__password
+                    input(type="password" placeholder="New password")
+                    i.icon_eyes
+
+            .form__row.form__row_full
+                button.btn.btn_sm.btn_reverse(type="submit")
+                    span Save

@@ -80,7 +80,19 @@ body {
 			color: $color_bg_primary;
 		}
 
+		&_sm {
+			letter-spacing: -0.02em;
+
+			span {
+				font-size: 2em;
+				@media (min-width: 768px) {
+					font-size: 3em;
+				}
+			}
+
+		}
 	}
+
 }
 
 .desktop {

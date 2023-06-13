@@ -33,27 +33,6 @@
         }
     }
 
-    &__title {
-        font-size: 1em;
-        font-family: $main_font_family;
-        font-weight: 400;
-        margin: 0;
-        letter-spacing: -0.02em;
-        color: $color_info;
-        line-height: 0.96;
-        @media (min-width: 768px) {
-            line-height: 1;
-        }
-
-        span {
-            font-size: 2.25em;
-            @media (min-width: 768px) {
-                font-size: 3em;
-
-            }
-        }
-    }
-
     &__left {
         padding: 4em 0.625em 2em;
         @media (min-width: 768px) {

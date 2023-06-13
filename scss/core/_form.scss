@@ -1,4 +1,35 @@
 .form {
+	&_grid {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -0.3125em;
+
+		.form__row {
+			margin: 0 0.3125em 0.625em;
+			width: 100%;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			@media (min-width: 768px) {
+				width: calc(50% - 0.625em);
+			}
+
+			&_full {
+				width: 100%;
+			}
+
+			.btn {
+				@media (min-width: 768px) {
+					width: auto;
+					margin-top: 1.25em;
+				}
+			}
+		}
+
+	}
+
 	&__title {
 		text-transform: uppercase;
 		line-height: 1.4;
@@ -10,6 +41,21 @@
 			margin-bottom: 1.77778em;
 
 		}
+	}
+
+	&__label {
+		color: $btn_color;
+
+		font-size: 1.25em;
+		margin-top: 1em;
+		margin-bottom: 0.25em;
+		@media (min-width: 768px) {
+			font-size: 1.5em;
+			margin-top: 1.5em;
+			margin-bottom: 0.67em;
+
+		}
+
 	}
 
 	&__content {

@@ -1,0 +1,41 @@
+
+<div class="myInformation">
+  <div class="myInformation__photo">
+    <div class="myInformation__icon"><i class="icon_man"></i></div>
+    <div class="myInformation__upload"><span>Upload an image in jpg, gif, png format no more than 10 MB</span><a href="#">Upload Photo</a></div>
+  </div>
+  <div class="myInformation__form">
+    <form class="form form_sm form_grid" action="send.php">
+      <input type="hidden" name="subject" value="форма в футоре"/>
+      <input type="hidden" name="notspam" value=""/>
+      <div class="form__row form__row_full">
+        <div class="form__label">My information</div>
+      </div>
+      <div class="form__row">
+        <input type="text" placeholder="Name"/>
+      </div>
+      <div class="form__row">
+        <input type="text" placeholder="Surname"/>
+      </div>
+      <div class="form__row form__row_full">
+        <input type="email" placeholder="E-mail"/>
+      </div>
+      <div class="form__row form__row_full">
+        <div class="form__label">Password</div>
+      </div>
+      <div class="form__row form__row_full">
+        <div class="form__password">
+          <input type="password" placeholder="Password"/><i class="icon_eyes"></i>
+        </div>
+      </div>
+      <div class="form__row form__row_full">
+        <div class="form__password">
+          <input type="password" placeholder="New password"/><i class="icon_eyes"></i>
+        </div>
+      </div>
+      <div class="form__row form__row_full">
+        <button class="btn btn_sm btn_reverse" type="submit"><span>Save</span></button>
+      </div>
+    </form>
+  </div>
+</div>

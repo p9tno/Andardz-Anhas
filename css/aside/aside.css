@@ -1,0 +1,9 @@
+.aside__item {
+  background: #F2EEE8;
+  border: 0.0625em solid #D1CAC2;
+  border-radius: 1.25em;
+  margin-bottom: 0.625em;
+}
+.aside__item:last-child {
+  margin-bottom: 0;
+}
