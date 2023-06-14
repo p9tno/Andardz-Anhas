@@ -1,0 +1,140 @@
+.contacts {
+    @media (min-width: 768px) {
+        margin-top: -3.875em;
+    }
+
+    .section__title {
+        @media (min-width: 768px) {
+            padding-top: 3.5em;
+        }
+    }
+
+    &__wrap {
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    }
+
+    &__content {
+        @media (min-width: 768px) {
+            width: 21.875em;
+        }
+    }
+
+    &__list {
+        margin-top: 2.5em;
+        font-size: 0.75em;
+        @media (min-width: 768px) {
+            margin-top: 3.875em;
+            font-size: 1em;
+        }
+    }
+
+    &__item {
+        display: flex;
+        text-decoration: none;
+        margin-bottom: 2em;
+        width: fit-content;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:first-child {
+            .contacts__icon {
+                i {
+                    font-size: 1.5em;
+                }
+            }
+        }
+
+        &:last-child {
+            .contacts__icon {
+                i {
+                    font-size: 1.375em;
+                }
+            }
+
+            .contacts__info {
+                span {
+                    font-family: $second_font_family;
+                    font-size: 1.25em;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        flex: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 4.125em;
+        height: 4.125em;
+        border-radius: 100%;
+
+        background: #F4F1EA;
+        border: 0.125em solid $btn_color;
+        margin-right: 1.75em;
+
+        i {
+            color: $btn_color;
+            font-size: 1.125em;
+        }
+    }
+
+    &__info {
+        color: $main_color;
+
+        span {
+            font-size: 1em;
+        }
+    }
+
+    &__label {
+        letter-spacing: -0.02em;
+        font-size: 2em;
+        color: $color_info;
+        margin-bottom: 0.25em;
+    }
+
+    &__btn {
+        margin-top: 2em;
+        @media (min-width: 768px) {
+            margin-top: 3.75em;
+
+        }
+    }
+
+    &__map {
+        overflow: hidden;
+        border-radius: 1.25em;
+        width: 100%;
+        height: 16em;
+        margin-top: 2.5em;
+        @media (min-width: 768px) {
+            margin-top: 0;
+            border-radius: 2.5em;
+            width: 68.75em;
+            height: 38.875em;
+        }
+    }
+
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+[class*="copyrights-pane"] {
+    display: none !important;
+}
+
+[class*="ground-pane"] {
+    filter: grayscale(1);
+}
