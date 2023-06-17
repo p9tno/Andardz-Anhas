@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wv247x');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?wv247x#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?wv247x') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?wv247x') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?wv247x##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ncdiac');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?ncdiac#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?ncdiac') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?ncdiac') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?ncdiac##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -135,6 +135,11 @@
 .icon_polygon {
   &:before {
     content: $icon_polygon; 
+  }
+}
+.icon_pause {
+  &:before {
+    content: $icon_pause; 
   }
 }
 

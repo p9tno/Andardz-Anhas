@@ -1,0 +1,154 @@
+extends ../../layout/layout.pug
+
+block variable
+    -var path = '../../';
+
+
+block content
+    // begin content
+    section#content.content.section
+        .container_center.container_center_sm
+            .content__wrap
+
+                .content__aside
+                    .aside
+                        .aside__list
+                            //- begin info
+                            .aside__info
+                                .aside__cat Technologies
+                                .aside__status Active
+                            //- end info
+
+                            //- begin info
+                            .aside__info
+                                .aside__img.img
+                                    img(src="../../img/aside.svg", alt="alt")
+                                .aside__text Children's Health Foundation of Armenia
+
+                            //- end info
+
+
+                            .aside__wrap
+                                //- begin aside item
+                                .aside__item
+                                    .donors
+
+                                        .donors__row
+                                            .donors__title Top donors:
+                                        each item in ['', '', '', '', ]
+                                            .donors__row
+                                                .donors__name 
+                                                    span Armen Martirosyan
+                                                .donors__target Birthday Fundraiser
+                                                .donors__sum $ 15,500.00
+
+                                //- end aside item  
+
+                                //- begin aside item
+                                .aside__item
+                                    .donors
+
+                                        .donors__row
+                                            .donors__title Donors:
+                                        each item in ['', '', '', '', ]
+                                            .donors__row
+                                                .donors__name 
+                                                    span Armen Martirosyan
+                                                    span 2 hours ago
+                                                .donors__target Birthday Fundraiser
+                                                .donors__sum $ 15,500.00
+
+                                //- end aside item  
+
+
+                .content__main
+
+                    // begin breadcrumbs
+                    .breadcrumbs
+                        .aioseo-breadcrumbs
+                            span.aioseo-breadcrumb
+                                a(href="#") Main 
+                            span.aioseo-breadcrumb-separator &middot;
+                            span.aioseo-breadcrumb Fundraising
+                    // end breadcrumbs
+
+                    h1.section__title.section__title_sm
+                        span Establishment of a clinic for hereditary predisposition to cancer in children
+
+                    .singleFundraising
+                        .singleFundraising__img.img
+                            img(src="../../img/singleFundraising.jpg", alt="alt")
+
+                        .singleFundraising__progress
+                            .progress
+                                .progress__info
+                                    .progress__sum
+                                        span $
+                                        span.sum  15,500.00
+
+                                    .progress__percent
+                                        span.percent 70
+                                        span  %
+
+                                .progress__line
+                                    .progress__line_bg(style="width: 70%;")
+
+                        .singleFundraising__info
+                            .singleFundraising__day
+                                .singleFundraising__circle
+                                    span 4
+                                .singleFundraising__label Days left
+
+
+                            .singleFundraising__goal
+                                .singleFundraising__label Goal:
+                                .singleFundraising__sum
+                                    span $
+                                    span.sum  8.000.000
+
+
+                        .singleFundraising__support
+                            .messenger.messenger_share
+                                .messenger__label Share with:
+                                .messenger__list
+                                    .messenger__item
+                                        a.messenger__link(href="#" target="_blank")
+                                            i.icon_instagram
+                                    .messenger__item
+                                        a.messenger__link(href="#" target="_blank")
+                                            i.icon_facebook
+                                    .messenger__item
+                                        a.messenger__link(href="#" target="_blank")
+                                            i.icon_twitter
+
+                            a.btn.btn_sm.btn_reverse(href="#")
+                                span support
+
+
+                    .tabs__wrapper
+                        .tabs
+                            .tab Description
+                            .tab Updates
+
+                        .tabs__content
+                            each item in ['', '', ]
+
+                                .tab__item
+                                    .content__content 
+                                        p Равным образом постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации. Товарищи! дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке форм развития. Таким образом сложившаяся структура организации требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.
+                                        p Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании форм развития. Идейные соображения высшего порядка, а также укрепление и развитие структуры позволяет оценить значение новых предложений. Равным образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание форм развития. Задача организации, в особенности же сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.
+
+                                        p Таким образом начало повседневной работы по формированию позиции требуют от нас анализа систем массового участия. Не следует, однако забывать, что постоянный количественный рост и сфера нашей активности требуют от нас анализа позиций, занимаемых участниками в отношении поставленных задач.
+
+                                        .content__gallery
+                                            .content__img
+                                                img(src="../../img/content_1.jpg", alt="alt")
+                                            .content__img
+                                                img(src="../../img/content_2.jpg", alt="alt")
+
+                                        p Равным образом постоянный количественный рост и сфера нашей активности позволяет выполнять важные задания по разработке соответствующий условий активизации. Товарищи! дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке форм развития. Таким образом сложившаяся структура организации требуют определения и уточнения позиций, занимаемых участниками в отношении поставленных задач. Разнообразный и богатый опыт постоянное информационно-пропагандистское обеспечение нашей деятельности обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.
+                                        p Товарищи! постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании форм развития. Идейные соображения высшего порядка, а также укрепление и развитие структуры позволяет оценить значение новых предложений. Равным образом начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. Идейные соображения высшего порядка, а также реализация намеченных плановых заданий в значительной степени обуславливает создание форм развития. Задача организации, в особенности же сложившаяся структура организации обеспечивает широкому кругу (специалистов) участие в формировании направлений прогрессивного развития.
+
+
+
+    // end content

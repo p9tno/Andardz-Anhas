@@ -1,6 +1,16 @@
 .messenger {
     margin-top: 10em;
 
+    &__label {
+        letter-spacing: -0.02em;
+        color: $color_info;
+        font-size: 0.875em;
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+
+        }
+    }
+
     &__list {
         display: flex;
         align-items: center;
@@ -34,6 +44,35 @@
             background-color: $color_white;
         }
 
+    }
+
+    &_share {
+        display: flex;
+        align-items: center;
+        margin-top: 0;
+
+        .messenger__list {
+            margin-left: 1.25em;
+        }
+
+        .messenger__item {
+            margin-right: 0.625em;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .messenger__link {
+            border: 0.0625em solid $color_info;
+            color: $btn_color;
+
+            font-size: 0.5em;
+            @media (min-width: 768px) {
+                font-size: 0.7568em;
+
+            }
+        }
     }
 
 }

@@ -1,0 +1,103 @@
+.audio {
+    &__wrap {
+        background: #F2EEE8;
+        border: 1px solid #D1CAC2;
+        border-radius: 1.25em;
+    }
+
+    &__content {
+        position: relative;
+        width: 34em;
+        padding: 1.076em 1.5em 1.076em 0;
+    }
+
+    &__img {
+        position: absolute;
+        top: -1px;
+        bottom: -1px;
+        left: -1px;
+        width: 9.25em;
+        // height: 9.25em;
+        border-radius: 1.25em;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+    }
+
+    &__info {
+        margin-left: 10.5em;
+    }
+
+    &__name {
+        letter-spacing: -0.02em;
+        font-size: 1.5em;
+        color: $color_info;
+        width: 13em;
+        min-height: 2.4em;
+    }
+
+    &__control {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1em;
+    }
+
+    &__toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 2.5em;
+        height: 2.5em;
+        margin-right: 0.75em;
+
+        background: #FCF9F3;
+        border: 0.0625em solid $color_info;
+
+        border-radius: 100%;
+        cursor: pointer;
+
+        &:after {
+            display: inline-block;
+            content: '\e90c';
+            font-family: $icon_font_famaly;
+            line-height: 1;
+            color: $color_info;
+        }
+
+        &.active {
+            &:after {
+                content: '\e916';
+
+            }
+        }
+    }
+
+    &__line {
+        flex-grow: 1;
+        height: 0.25em;
+        border-radius: 6em;
+        background-color: rgba(#ACA092, 0.4);
+        overflow: hidden;
+
+        &_bg {
+            border-radius: 6em;
+            height: 100%;
+            background-color: $color_info;
+        }
+    }
+
+    &__time {
+        color: #9F9383;
+        font-family: 'Montserrat';
+        font-size: 0.875em;
+        margin-left: 0.5em;
+    }
+}

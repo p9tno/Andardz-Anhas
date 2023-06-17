@@ -1,58 +1,60 @@
 .tabs__wrapper {}
 
-.tabs__content{}
+.tabs__content {
+    margin-top: 1em;
+    @media (min-width: 768px) {
+        margin-top: 2em;
+
+    }
+}
 
 .tabs {
     display: flex;
-    // justify-content: space-between;
-    // margin-bottom: 0.75em;
-
-    @media (max-width: 767px) {
-        overflow-x: auto;
-        overflow-y: hidden;
-        padding-bottom: 0.75em;
-        margin-left: -1.25em;
-        margin-right: -1.25em;
-    }
-
-    @media (min-width: 768px) {
-        margin-bottom: 4.375em;
-    }
-
-
 }
-
-
 
 .tab {
     position: relative;
-    width: fit-content;
-    flex: none;
-    margin-right: 2em;
+    letter-spacing: -0.02em;
+    color: #ACA092;
+    padding-bottom: 0.69em;
     cursor: pointer;
+    transition: 0.3s;
 
-    &:first-child {
-        margin-left: 1em;
-    }
+    margin-right: 1.25em;
 
     &:last-child {
-        margin-right: 2em;
+        margin-right: 0;
     }
 
+    font-size: 1.125em;
     @media (min-width: 768px) {
-        margin-right: 6.5em;
+        font-size: 2em;
 
-        &:first-child {
-            margin-left: 0;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+
+        border-bottom: 0.0625em solid $btn_color;
+        opacity: 0;
+        transition: 0.3s;
+
+    }
+
+    &.active {
+        color: $btn_color;
+
+        &:before {
+            content: '';
+            opacity: 1;
         }
     }
 
-
-    &.active {
-        color: red;
-    }
-
     &:hover {
-        color: red;
+        color: $btn_color;
     }
 }

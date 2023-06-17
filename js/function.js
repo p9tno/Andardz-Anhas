@@ -157,6 +157,14 @@ $(document).ready(function() {
     }
     togglePassword()
 
+    function audio() {
+        $('.audio__toggle').click(function(event) {
+            $(this).toggleClass('active');
+        })
+
+    }
+    audio()
+
 
     // function collapsed() {
     //     let toggle = $('[data-collapse]');
@@ -186,17 +194,17 @@ $(document).ready(function() {
     // }
     // collapsed();
 
-    // function doTabs () {
-    //     $('.tabs__wrapper').each(function() {
-    //         let ths = $(this);
-    //         ths.find('.tab__item').not(':first').hide();
-    //         ths.find('.tab').click(function() {
-    //             ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-    //             ths.find('.tab__item').hide().eq($(this).index()).fadeIn()
-    //         }).eq(0).addClass('active');
-    //     });
-    // }
-    // doTabs();
+    function doTabs () {
+        $('.tabs__wrapper').each(function() {
+            let ths = $(this);
+            ths.find('.tab__item').not(':first').hide();
+            ths.find('.tab').click(function() {
+                ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+                ths.find('.tab__item').hide().eq($(this).index()).fadeIn()
+            }).eq(0).addClass('active');
+        });
+    }
+    doTabs();
     //
     // function doDrop() {
     //     $('.drop__toggle').on('click', function() {

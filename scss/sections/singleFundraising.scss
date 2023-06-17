@@ -1,0 +1,138 @@
+.singleFundraising {
+    &__img {
+        width: 100%;
+        overflow: hidden;
+
+        height: 9.375em;
+        border-radius: 1em;
+        @media (min-width: 768px) {
+            height: 37.5em;
+            border-radius: 2.5em;
+
+        }
+
+    }
+
+    &__progress {
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 4.6875em;
+
+        }
+
+        .progress {
+            &__info {
+                span {
+                    @media (min-width: 768px) {
+                        font-size: 2.625em;
+                    }
+                }
+            }
+
+            &__line {
+                @media (min-width: 768px) {
+                    margin-top: 1.25em;
+                }
+            }
+
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 1.25em;
+    }
+
+    &__day {
+        display: flex;
+        align-items: center;
+    }
+
+    &__circle {
+        position: relative;
+        width: 3.5em;
+        height: 3.5em;
+
+        border-radius: 100%;
+
+        border: 0.0625em solid $color_info;
+        background-color: #F2EEE8;
+        margin-right: 1.25em;
+        font-size: 0.5em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+        }
+
+        span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-45%);
+            font-weight: 500;
+
+            font-family: $second_font_family;
+            font-size: 2em;
+            letter-spacing: -0.02em;
+            color: $color_info;
+        }
+    }
+
+    &__label {
+        letter-spacing: -0.02em;
+        color: $color_info;
+
+        font-size: 0.875em;
+        @media (min-width: 768px) {
+            font-size: 1.5em;
+
+        }
+    }
+
+    &__goal {
+        display: flex;
+        align-items: center;
+    }
+
+    &__sum {
+        transform: translateY(0.125em);
+        margin-left: 0.625em;
+        @media (min-width: 768px) {
+            transform: translateY(0.25em);
+            margin-left: 1.25em;
+        }
+
+        span {
+            font-family: $second_font_family;
+            font-weight: 400;
+
+            letter-spacing: -0.02em;
+            color: $color_info;
+            line-height: 1;
+            font-size: 1.375em;
+            @media (min-width: 768px) {
+                font-size: 2.625em;
+
+            }
+        }
+    }
+
+    &__support {
+        margin-top: 1em;
+        @media (min-width: 768px) {
+            margin-top: 2.125em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .btn {
+            @media (max-width: 767px) {
+                margin-top: 1em;
+                width: 100%;
+            }
+        }
+    }
+
+}

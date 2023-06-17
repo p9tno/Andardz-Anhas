@@ -1,0 +1,80 @@
+.donors {
+    &__row {
+        border-bottom: 1px solid #C6BDB3;
+        font-size: 0.75em;
+        padding: 1.5em;
+        @media (min-width: 768px) {
+            font-size: 1em;
+            padding: 2em 2.75em;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &__title {
+        letter-spacing: -0.02em;
+        font-size: 2em;
+        color: $color_info;
+        line-height: 1;
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        line-height: 1;
+
+        span {
+            &:nth-child(1) {
+                flex: none;
+                display: inline-block;
+                letter-spacing: -0.02em;
+                font-size: 1.5em;
+                color: $color_info;
+                width: 9em;
+            }
+
+            &:nth-child(2) {
+                position: relative;
+                display: inline-block;
+                transform: translateY(0.2em);
+                font-family: 'Montserrat';
+                font-size: 0.875em;
+                color: #6D665E;
+                padding-left: 1em;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    display: block;
+                    width: 0.25em;
+                    height: 0.25em;
+                    border-radius: 100%;
+                    background-color: #9F9383;
+
+                }
+            }
+        }
+    }
+
+    &__target {
+        margin-top: 0.6em;
+        color: #78716A;
+        font-size: 0.875em;
+    }
+
+    &__sum {
+        margin-top: 0.65em;
+        letter-spacing: -0.02em;
+        font-size: 1.5em;
+        line-height: 1;
+        color: $color_info;
+        font-family: $second_font_family;
+    }
+
+}

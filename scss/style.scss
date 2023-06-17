@@ -10,6 +10,8 @@
 @import 'core/messenger';
 @import 'core/search';
 @import 'core/language';
+@import 'core/audio';
+@import 'core/tabs';
 
 @import 'core/header';
 @import 'core/footer';
@@ -26,9 +28,11 @@
 @import 'sections/registration';
 
 @import 'sections/content';
+@import 'sections/singleFundraising';
 @import 'aside/aside';
 @import 'aside/account';
 @import 'aside/donations';
+@import 'aside/donors';
 
 @import 'sections/contacts';
 
@@ -37,9 +41,8 @@
 @import 'core/pagination';
 @import 'core/buttons';
 
-@import 'core/collapse';
-@import 'core/tabs';
-@import 'core/drop';
+// @import 'core/collapse';
+// @import 'core/drop';
 
 @import 'vendor/modal';
 @import 'vendor/swiper';

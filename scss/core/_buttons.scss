@@ -70,4 +70,21 @@
 		}
 	}
 
+	&_prev {
+		span {
+			&:after {
+				content: none;
+			}
+
+			&:before {
+				content: '\e90e';
+				font-family: $icon_font_famaly;
+				margin-right: 0.625em;
+
+			}
+
+		}
+
+	}
+
 }
