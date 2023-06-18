@@ -31,13 +31,8 @@ function isTouch() {
     return app.touchDevice();
 } // for touch device
 
-// console.log('pathname: ', window.location.pathname);
-// console.log('url: ', window.location.href);
-// console.log('origin: ', window.location.origin);
-
-
 $(document).ready(function() {
-    console.log('ready');
+
     window.addEventListener('resize', () => {
         // Запрещаем выполнение скриптов при смене только высоты вьюпорта (фикс для скролла в IOS и Android >=v.5)
         if (app.resized == screen.width) { return; }
@@ -52,14 +47,6 @@ $(document).ready(function() {
             let top = $(id).offset().top;
             $('body,html').animate({scrollTop: top}, 1500);
         });
-
-        // $(window).scroll(function(){
-        //     if($(window).scrollTop()>500){
-        //         $('.toTop').fadeIn(900)
-        //     }else{
-        //         $('.toTop').fadeOut(700)
-        //     }
-        // });
     }
     scrollPage();
 
@@ -79,21 +66,16 @@ $(document).ready(function() {
             }
         });
     }
-    showModal();
+    // showModal();
 
 
     function openMobileNav() {
         $('.toggle').click(function(event) {
-            // $( 'body' ).toggleClass('nav-open');
             $( '.header__nav' ).toggleClass('active');
             $(this).toggleClass('active');
-
-            // $( 'body' ).addClass('nav-open');
-            // $( '.header__nav' ).addClass('active');
         });
 
         $('.navbar__close').click(function(event) {
-            // $( 'body' ).removeClass('nav-open');
             $( '.header__nav' ).removeClass('active');
             $( '.toggle' ).removeClass('active');
         });
@@ -144,8 +126,7 @@ $(document).ready(function() {
     function togglePassword() {
         $('.form__password .icon_eyes').click(function(event) {
             let input = $(this).closest('.form__password').find('input');
-            // console.log('click');
-            // console.log(input);
+
             if (input.attr('type') == 'password') {
                 $(this).addClass('view');
                 input.attr('type', 'text');
@@ -157,42 +138,33 @@ $(document).ready(function() {
     }
     togglePassword()
 
-    function audio() {
+    function stopPlay() {
         $('.audio__toggle').click(function(event) {
             $(this).toggleClass('active');
         })
+    }
+    stopPlay()
+
+    function bottomAudio() {
+        let audioBottom = $( '.audio' ).offset().top + $( '.audio' ).innerHeight();;
+        setAudioPosition();
+
+        $( window ).scroll( function (e) {
+            setAudioPosition();
+        } );
+
+        function setAudioPosition() {
+            currentTop = $( window ).scrollTop();
+
+            if ( currentTop > audioBottom ) {
+                $( '.audio' ).addClass( 'bottom' );
+            } else {
+                $( '.audio' ).removeClass( 'bottom' );
+            }
+        }
 
     }
-    audio()
-
-
-    // function collapsed() {
-    //     let toggle = $('[data-collapse]');
-    //
-    //     toggle.on('click', function() {
-    //         let id = $(this).data('collapse'),
-    //         body = $('[data-collapse-body="'+id+'"]'),
-    //         wrap = body.closest('[data-collapse-wrapper]');
-    //
-    //         if (!id) {
-    //             // $('[data-collapse-wrapper]').removeClass('open');
-    //             body = $(this).parent().find('[data-collapse-body]');
-    //             $(this).toggleClass('open');
-    //             if ($(this).hasClass('open')) {
-    //                 body.slideDown();
-    //             } else {
-    //                 body.slideUp();
-    //             }
-    //         } else if (id === 'all') {
-    //             body.slideDown();
-    //             toggle.addClass('open');
-    //         } else {
-    //             body.slideToggle();
-    //             $(this).toggleClass('open');
-    //         }
-    //     });
-    // }
-    // collapsed();
+    bottomAudio()
 
     function doTabs () {
         $('.tabs__wrapper').each(function() {
@@ -205,15 +177,6 @@ $(document).ready(function() {
         });
     }
     doTabs();
-    //
-    // function doDrop() {
-    //     $('.drop__toggle').on('click', function() {
-    //         // $('.drop__list').toggleClass('open');
-    //         $(this).toggleClass('active');
-    //         $(this).closest('.drop').find('.drop__list').toggleClass('open');
-    //     });
-    // };
-    // doDrop();
 
     function initSelect2 () {
         $('.select').select2({
@@ -225,8 +188,6 @@ $(document).ready(function() {
 
 
     function showMore(classItem, btn) {
-        // let classItem = '.vacancies__item';
-        // let classItem = class;
         let item = $(''+ classItem +'');
         let count = item.length;
         let start = 3;
@@ -258,6 +219,5 @@ $(document).ready(function() {
 
     }
     showMore('.faq_grid_home_js > .faq__item', '.show_more_js');
-
 
 })

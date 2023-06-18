@@ -1049,18 +1049,17 @@ body {
   border-radius: 1.25em;
 }
 .audio__content {
-  position: relative;
-  width: 34em;
-  padding: 1.076em 1.5em 1.076em 0;
+  display: flex;
+  align-items: center;
+  padding-right: 1.5em;
 }
 .audio__img {
-  position: absolute;
-  top: -1px;
-  bottom: -1px;
-  left: -1px;
   width: 9.25em;
+  height: 9.25em;
   border-radius: 1.25em;
   overflow: hidden;
+  margin-right: 1.5em;
+  flex: none;
 }
 .audio__img img {
   width: 100%;
@@ -1069,7 +1068,7 @@ body {
   display: block;
 }
 .audio__info {
-  margin-left: 10.5em;
+  flex-grow: 1;
 }
 .audio__name {
   letter-spacing: -0.02em;
@@ -1124,6 +1123,62 @@ body {
   font-family: "Montserrat";
   font-size: 0.875em;
   margin-left: 0.5em;
+}
+.audio__close {
+  display: none;
+}
+.audio__close:before {
+  content: "";
+  font-family: "icon";
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #46264B;
+  cursor: pointer;
+}
+.audio.bottom {
+  position: fixed;
+  z-index: 1;
+  animation-name: showAudio;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+}
+.audio.bottom .audio__wrap {
+  display: flex;
+  align-items: center;
+  width: 117.5em;
+  padding: 1.375em 4.375em 1.375em 43.75em;
+  border: 0.125em solid #5A3560;
+}
+.audio.bottom .audio__content {
+  width: 100%;
+  padding-right: 0;
+}
+.audio.bottom .audio__img {
+  width: 6.875em;
+  height: 6.875em;
+}
+.audio.bottom .audio__name {
+  width: 100%;
+  min-height: auto;
+}
+.audio.bottom .audio__control {
+  width: 25.875em;
+}
+.audio.bottom .audio__close {
+  display: block;
+}
+
+@keyframes showAudio {
+  0% {
+    bottom: 1.25em;
+    left: 50%;
+    transform: translate(-50%, 14em);
+  }
+  100% {
+    bottom: 1.25em;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
 }
 .tabs__content {
   margin-top: 1em;

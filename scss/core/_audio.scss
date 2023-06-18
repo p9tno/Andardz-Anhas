@@ -6,19 +6,19 @@
     }
 
     &__content {
-        position: relative;
-        width: 34em;
-        padding: 1.076em 1.5em 1.076em 0;
+        display: flex;
+        align-items: center;
+        padding-right: 1.5em;
     }
 
     &__img {
-        position: absolute;
-        top: -1px;
-        bottom: -1px;
-        left: -1px;
+
         width: 9.25em;
+        height: 9.25em;
         border-radius: 1.25em;
         overflow: hidden;
+        margin-right: 1.5em;
+        flex: none;
 
         img {
             width: 100%;
@@ -29,7 +29,7 @@
     }
 
     &__info {
-        margin-left: 10.5em;
+        flex-grow: 1;
     }
 
     &__name {
@@ -100,6 +100,77 @@
         margin-left: 0.5em;
     }
 
-    &.bottom {
+    &__close {
+        display: none;
+
+        &:before {
+            content: '\e914';
+            font-family: $icon_font_famaly;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: $color_info;
+            cursor: pointer;
         }
+    }
+
+    &.bottom {
+        position: fixed;
+        z-index: 1;
+        // bottom: 1.25em;
+        // left: 50%;
+        // transform: translateX(-50%);
+
+        .audio__wrap {
+            display: flex;
+            align-items: center;
+
+            width: 117.5em;
+            padding: 1.375em 4.375em 1.375em 43.75em;
+            border: 0.125em solid $btn_color;
+        }
+
+        .audio__content {
+            width: 100%;
+            padding-right: 0;
+        }
+
+        .audio__img {
+            width: 6.875em;
+            height: 6.875em;
+        }
+
+        .audio__name {
+            width: 100%;
+            min-height: auto;
+        }
+
+        .audio__control {
+            width: 25.875em;
+        }
+
+        .audio__close {
+            display: block;
+        }
+
+        -webkit-animation-name: showAudio;
+        animation-name: showAudio;
+        -webkit-animation-duration: 0.8s;
+        animation-duration: 0.8s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+}
+
+@keyframes showAudio {
+    0% {
+        bottom: 1.25em;
+        left: 50%;
+        transform: translate(-50%, 14em);
+    }
+
+    100% {
+        bottom: 1.25em;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
 }
