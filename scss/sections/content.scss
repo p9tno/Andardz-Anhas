@@ -45,13 +45,13 @@
             flex: none;
             width: 25.9375em;
             margin-right: 13.125em;
+            padding-top: 3.875em;
         }
 
         &_audio {
             @media (min-width: 768px) {
                 width: 34em;
                 margin-right: 5em;
-
             }
         }
     }

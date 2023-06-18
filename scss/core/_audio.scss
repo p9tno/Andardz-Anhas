@@ -17,7 +17,6 @@
         bottom: -1px;
         left: -1px;
         width: 9.25em;
-        // height: 9.25em;
         border-radius: 1.25em;
         overflow: hidden;
 
@@ -100,4 +99,7 @@
         font-size: 0.875em;
         margin-left: 0.5em;
     }
+
+    &.bottom {
+        }
 }

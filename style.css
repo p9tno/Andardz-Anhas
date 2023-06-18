@@ -664,7 +664,7 @@ body {
 }
 
 .pt_0 {
-  padding-top: 0;
+  padding-top: 0 !important;
 }
 
 .hand__wrap {
@@ -1125,7 +1125,6 @@ body {
   font-size: 0.875em;
   margin-left: 0.5em;
 }
-
 .tabs__content {
   margin-top: 1em;
 }
@@ -3365,6 +3364,7 @@ body {
     flex: none;
     width: 25.9375em;
     margin-right: 13.125em;
+    padding-top: 3.875em;
   }
 }
 @media (min-width: 768px) {
