@@ -1,0 +1,70 @@
+.record {
+    font-size: 0.75em;
+    @media (max-width: 767px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    @media (min-width: 768px) {
+        font-size: 1em;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        margin-left: 1em;
+        @media (min-width: 768px) {
+            margin-left: 0;
+        }
+
+    }
+
+    &__name {
+        text-transform: uppercase;
+        font-size: 1.125em;
+        color: #ECE7DE;
+        font-weight: 700;
+
+    }
+
+    &__img {
+        width: 4.25em;
+        height: 4.25em;
+        border-radius: 100%;
+        overflow: hidden;
+        border: 0.125em solid $btn_color;
+        margin-left: 0.875em;
+    }
+}
+
+.bell {
+    display: inline-block;
+    text-decoration: none;
+    color: #ECE7DE;
+    position: relative;
+
+    i {
+        font-size: 1.75em;
+
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -0.125em;
+        right: 0;
+        display: block;
+        width: 0.625em;
+        height: 0.625em;
+        border-radius: 100%;
+        background-color: #AD4FBC;
+        opacity: 0;
+    }
+
+    &.active {
+        &:before {
+            opacity: 1;
+
+        }
+    }
+}

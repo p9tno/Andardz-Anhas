@@ -27,14 +27,15 @@ header.header
 
 
             .header__col.desktop
-                .search
-                    a.search__link(href="#") Search
-
-
+                a(href="#").bell.active
+                    i.icon_bell
 
                 .record
-                    a.btn(href="#")
-                        span registration
+                    .record__content
+                        .record__name alexandra H.
+                        .record__img.img
+                            img(src="../../img/account.jpg", alt="alt")
+
 
 
 
@@ -76,8 +77,15 @@ header.header
                             i.icon_loup
 
             .navbar__row.mobile
-                a.btn(href="#")
-                    span registration
+
+                .record
+                    a(href="#").bell.active
+                        i.icon_bell
+
+                    .record__content
+                        .record__name alexandra H.
+                        .record__img.img
+                            img(src="../../img/account.jpg", alt="alt")
 
         .search__wrap.desktop
             form.search__form

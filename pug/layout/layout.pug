@@ -14,14 +14,24 @@ html(lang="en")
     body
 
         .wrapper#wrapper
+
             if !registration
                 include header.pug
+
+            if private
+                include headerPrivate.pug
+
+
 
             main.main_content
                 block content
 
             if !registration
                 include footer.pug
+
+            if private
+                include footer.pug
+
 
 
             include modal.pug

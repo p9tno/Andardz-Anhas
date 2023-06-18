@@ -1043,6 +1043,71 @@ body {
   object-fit: cover;
 }
 
+.record {
+  font-size: 0.75em;
+}
+@media (max-width: 767px) {
+  .record {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 768px) {
+  .record {
+    font-size: 1em;
+  }
+}
+.record__content {
+  display: flex;
+  align-items: center;
+  margin-left: 1em;
+}
+@media (min-width: 768px) {
+  .record__content {
+    margin-left: 0;
+  }
+}
+.record__name {
+  text-transform: uppercase;
+  font-size: 1.125em;
+  color: #ECE7DE;
+  font-weight: 700;
+}
+.record__img {
+  width: 4.25em;
+  height: 4.25em;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 0.125em solid #5A3560;
+  margin-left: 0.875em;
+}
+
+.bell {
+  display: inline-block;
+  text-decoration: none;
+  color: #ECE7DE;
+  position: relative;
+}
+.bell i {
+  font-size: 1.75em;
+}
+.bell:before {
+  content: "";
+  position: absolute;
+  top: -0.125em;
+  right: 0;
+  display: block;
+  width: 0.625em;
+  height: 0.625em;
+  border-radius: 100%;
+  background-color: #AD4FBC;
+  opacity: 0;
+}
+.bell.active:before {
+  opacity: 1;
+}
+
 .audio__wrap {
   background: #F2EEE8;
   border: 1px solid #D1CAC2;
